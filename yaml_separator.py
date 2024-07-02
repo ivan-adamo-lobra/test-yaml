@@ -22,7 +22,7 @@ def filter_get_methods_and_remove_responses(yaml_content):
                 del filtered_content['paths'][path]
     return filtered_content
 
-def write_yaml_files(data, base_filename, max_lines=10000):
+def write_yaml_files(data, base_filename, max_lines=7000):
     """ Scrive i dati filtrati in più file YAML, ciascuno con un massimo di max_lines righe. """
     serialized_data = yaml.dump(data, sort_keys=False, default_flow_style=False)
     lines = serialized_data.splitlines()

@@ -1,0 +1,2264 @@
+          type: boolean
+          nullable: true
+          title: Co.code post.block
+          description: Posting block for company code
+        AccountingClerk:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: Clerk Abbrev.
+          description: Accounting Clerk Abbreviation
+        AccountingClerkFaxNumber:
+          type: string
+          nullable: true
+          maxLength: 31
+          title: Acctg clerk's fax
+          description: Accounting clerk's fax number at the customer/vendor
+        AccountingClerkPhoneNumber:
+          type: string
+          nullable: true
+          maxLength: 30
+          title: Acct.clerks tel.no.
+          description: Accounting clerk's telephone number at business partner
+        SupplierClerk:
+          type: string
+          nullable: true
+          maxLength: 15
+          title: Clerk at vendor
+        SupplierClerkURL:
+          type: string
+          nullable: true
+          maxLength: 130
+          title: Clrk's internet add.
+          description: Internet address of partner company clerk
+        PaymentMethodsList:
+          type: string
+          nullable: true
+          maxLength: 10
+          title: Payment Methods
+          description: List of Respected Payment Methods
+        PaymentReason:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Payment Reason
+        PaymentTerms:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Terms of Payment
+          description: Key for Terms of Payment
+        ClearCustomerSupplier:
+          type: boolean
+          nullable: true
+          title: Clearing with cust.
+          description: 'Indicator: Clearing between customer and vendor?'
+        IsToBeLocallyProcessed:
+          type: boolean
+          nullable: true
+          title: Local Processing
+          description: 'Indicator: Local Processing?'
+        ItemIsToBePaidSeparately:
+          type: boolean
+          nullable: true
+          title: Individual Payment
+          description: 'Indicator: Pay All Items Separately?'
+        PaymentIsToBeSentByEDI:
+          type: boolean
+          nullable: true
+          title: Pmnt advice by EDI
+          description: 'Indicator: Send Payment Advices by EDI'
+        HouseBank:
+          type: string
+          nullable: true
+          maxLength: 5
+          title: House Bank
+          description: Short Key for a House Bank
+        CheckPaidDurationInDays:
+          type: string
+          nullable: true
+          format: decimal
+          x-sap-precision: 3
+          x-sap-scale: 0
+          multipleOf: 1
+          minimum: -999
+          maximum: 999
+          example: '0'
+          title: Check Cashing Time
+          description: Probable Time Until Check Is Paid
+        Currency:
+          type: string
+          nullable: true
+          maxLength: 5
+          title: Currency
+          description: Currency Key
+        BillOfExchLmtAmtInCoCodeCrcy:
+          type: string
+          nullable: true
+          format: decimal
+          x-sap-precision: 14
+          x-sap-scale: 3
+          multipleOf: 0.001
+          minimum: -9.9999999999999E10
+          maximum: 9.9999999999999E10
+          example: '0'
+          title: Bill/Ex. Limit
+          description: Bill of Exchange Limit (in Local Currency)
+        SupplierClerkIDBySupplier:
+          type: string
+          nullable: true
+          maxLength: 12
+          title: Account with vendor
+          description: Our account number with the vendor
+        ReconciliationAccount:
+          type: string
+          nullable: true
+          maxLength: 10
+          title: Reconciliation Acct
+          description: Reconciliation Account in General Ledger
+        InterestCalculationCode:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: Interest Indicator
+        InterestCalculationDate:
+          type: string
+          nullable: true
+          example: /Date(1492041600000)/
+          title: Last Key Date
+          description: Key Date of Last Interest Calculation
+        IntrstCalcFrequencyInMonths:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: Int.Calc.Freq.
+          description: Interest Calculation Frequency in Months
+        SupplierHeadOffice:
+          type: string
+          nullable: true
+          maxLength: 10
+          title: Head Office
+          description: Head Office Account Number
+        AlternativePayee:
+          type: string
+          nullable: true
+          maxLength: 10
+          title: Alternative payee
+          description: Account number of the alternative payee
+        LayoutSortingRule:
+          type: string
+          nullable: true
+          maxLength: 3
+          title: Sort Key
+          description: Key for Sorting According to Assignment Numbers
+        APARToleranceGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Tolerance Group
+          description: Tolerance Group for Business Partner/G/L Account
+        SupplierCertificationDate:
+          type: string
+          nullable: true
+          example: /Date(1492041600000)/
+          title: Certification Date
+        SupplierAccountNote:
+          type: string
+          nullable: true
+          maxLength: 30
+          title: Account Memo
+          description: Memo
+        WithholdingTaxCountry:
+          type: string
+          nullable: true
+          maxLength: 3
+          title: WTax C/R Key
+          description: Withholding Tax Country/Region Key
+        DeletionIndicator:
+          type: boolean
+          nullable: true
+          title: Co.Cde Deletion Flag
+          description: Deletion Flag for Master Record (Company Code Level)
+        CashPlanningGroup:
+          type: string
+          nullable: true
+          maxLength: 10
+          title: Planning Group
+        IsToBeCheckedForDuplicates:
+          type: boolean
+          nullable: true
+          title: Check Double Invoice
+          description: Check Flag for Double Invoices or Credit Memos
+        MinorityGroup:
+          type: string
+          nullable: true
+          maxLength: 3
+          title: Minority Indicator
+        SupplierAccountGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Account Group
+          description: Supplier Account Group
+        to_CompanyText:
+          type: object
+          properties:
+            results:
+              type: array
+              items:
+                $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierCompanyTextType'
+        to_Supplier:
+          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierType'
+        to_SupplierDunning:
+          type: object
+          properties:
+            results:
+              type: array
+              items:
+                $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierDunningType'
+        to_SupplierWithHoldingTax:
+          type: object
+          properties:
+            results:
+              type: array
+              items:
+                $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierWithHoldingTaxType'
+      title: Supplier Company
+    API_BUSINESS_PARTNER.A_SupplierCompanyType-create:
+      type: object
+      properties:
+        Supplier:
+          type: string
+          maxLength: 10
+          title: Supplier
+          description: Account Number of Supplier
+        CompanyCode:
+          type: string
+          maxLength: 4
+          title: Company Code
+        AuthorizationGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Authorization
+          description: Authorization Group
+        PaymentBlockingReason:
+          type: string
+          nullable: true
+          maxLength: 1
+          title: Payment Block
+          description: Block Key for Payment
+        SupplierIsBlockedForPosting:
+          type: boolean
+          nullable: true
+          title: Co.code post.block
+          description: Posting block for company code
+        AccountingClerk:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: Clerk Abbrev.
+          description: Accounting Clerk Abbreviation
+        AccountingClerkFaxNumber:
+          type: string
+          nullable: true
+          maxLength: 31
+          title: Acctg clerk's fax
+          description: Accounting clerk's fax number at the customer/vendor
+        AccountingClerkPhoneNumber:
+          type: string
+          nullable: true
+          maxLength: 30
+          title: Acct.clerks tel.no.
+          description: Accounting clerk's telephone number at business partner
+        SupplierClerk:
+          type: string
+          nullable: true
+          maxLength: 15
+          title: Clerk at vendor
+        SupplierClerkURL:
+          type: string
+          nullable: true
+          maxLength: 130
+          title: Clrk's internet add.
+          description: Internet address of partner company clerk
+        PaymentMethodsList:
+          type: string
+          nullable: true
+          maxLength: 10
+          title: Payment Methods
+          description: List of Respected Payment Methods
+        PaymentReason:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Payment Reason
+        PaymentTerms:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Terms of Payment
+          description: Key for Terms of Payment
+        ClearCustomerSupplier:
+          type: boolean
+          nullable: true
+          title: Clearing with cust.
+          description: 'Indicator: Clearing between customer and vendor?'
+        IsToBeLocallyProcessed:
+          type: boolean
+          nullable: true
+          title: Local Processing
+          description: 'Indicator: Local Processing?'
+        ItemIsToBePaidSeparately:
+          type: boolean
+          nullable: true
+          title: Individual Payment
+          description: 'Indicator: Pay All Items Separately?'
+        PaymentIsToBeSentByEDI:
+          type: boolean
+          nullable: true
+          title: Pmnt advice by EDI
+          description: 'Indicator: Send Payment Advices by EDI'
+        HouseBank:
+          type: string
+          nullable: true
+          maxLength: 5
+          title: House Bank
+          description: Short Key for a House Bank
+        CheckPaidDurationInDays:
+          type: string
+          nullable: true
+          format: decimal
+          x-sap-precision: 3
+          x-sap-scale: 0
+          multipleOf: 1
+          minimum: -999
+          maximum: 999
+          example: '0'
+          title: Check Cashing Time
+          description: Probable Time Until Check Is Paid
+        Currency:
+          type: string
+          nullable: true
+          maxLength: 5
+          title: Currency
+          description: Currency Key
+        BillOfExchLmtAmtInCoCodeCrcy:
+          type: string
+          nullable: true
+          format: decimal
+          x-sap-precision: 14
+          x-sap-scale: 3
+          multipleOf: 0.001
+          minimum: -9.9999999999999E10
+          maximum: 9.9999999999999E10
+          example: '0'
+          title: Bill/Ex. Limit
+          description: Bill of Exchange Limit (in Local Currency)
+        SupplierClerkIDBySupplier:
+          type: string
+          nullable: true
+          maxLength: 12
+          title: Account with vendor
+          description: Our account number with the vendor
+        ReconciliationAccount:
+          type: string
+          nullable: true
+          maxLength: 10
+          title: Reconciliation Acct
+          description: Reconciliation Account in General Ledger
+        InterestCalculationCode:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: Interest Indicator
+        InterestCalculationDate:
+          type: string
+          nullable: true
+          example: /Date(1492041600000)/
+          title: Last Key Date
+          description: Key Date of Last Interest Calculation
+        IntrstCalcFrequencyInMonths:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: Int.Calc.Freq.
+          description: Interest Calculation Frequency in Months
+        SupplierHeadOffice:
+          type: string
+          nullable: true
+          maxLength: 10
+          title: Head Office
+          description: Head Office Account Number
+        AlternativePayee:
+          type: string
+          nullable: true
+          maxLength: 10
+          title: Alternative payee
+          description: Account number of the alternative payee
+        LayoutSortingRule:
+          type: string
+          nullable: true
+          maxLength: 3
+          title: Sort Key
+          description: Key for Sorting According to Assignment Numbers
+        APARToleranceGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Tolerance Group
+          description: Tolerance Group for Business Partner/G/L Account
+        SupplierCertificationDate:
+          type: string
+          nullable: true
+          example: /Date(1492041600000)/
+          title: Certification Date
+        SupplierAccountNote:
+          type: string
+          nullable: true
+          maxLength: 30
+          title: Account Memo
+          description: Memo
+        WithholdingTaxCountry:
+          type: string
+          nullable: true
+          maxLength: 3
+          title: WTax C/R Key
+          description: Withholding Tax Country/Region Key
+        DeletionIndicator:
+          type: boolean
+          nullable: true
+          title: Co.Cde Deletion Flag
+          description: Deletion Flag for Master Record (Company Code Level)
+        CashPlanningGroup:
+          type: string
+          nullable: true
+          maxLength: 10
+          title: Planning Group
+        IsToBeCheckedForDuplicates:
+          type: boolean
+          nullable: true
+          title: Check Double Invoice
+          description: Check Flag for Double Invoices or Credit Memos
+        MinorityGroup:
+          type: string
+          nullable: true
+          maxLength: 3
+          title: Minority Indicator
+        SupplierAccountGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Account Group
+          description: Supplier Account Group
+        to_CompanyText:
+          type: object
+          properties:
+            results:
+              type: array
+              items:
+                $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierCompanyTextType-create'
+        to_Supplier:
+          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierType-create'
+        to_SupplierDunning:
+          type: object
+          properties:
+            results:
+              type: array
+              items:
+                $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierDunningType-create'
+        to_SupplierWithHoldingTax:
+          type: object
+          properties:
+            results:
+              type: array
+              items:
+                $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierWithHoldingTaxType-create'
+      required:
+      - Supplier
+      - CompanyCode
+      title: Supplier Company (for create)
+    API_BUSINESS_PARTNER.A_SupplierCompanyType-update:
+      type: object
+      properties:
+        AuthorizationGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Authorization
+          description: Authorization Group
+        PaymentBlockingReason:
+          type: string
+          nullable: true
+          maxLength: 1
+          title: Payment Block
+          description: Block Key for Payment
+        SupplierIsBlockedForPosting:
+          type: boolean
+          nullable: true
+          title: Co.code post.block
+          description: Posting block for company code
+        AccountingClerk:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: Clerk Abbrev.
+          description: Accounting Clerk Abbreviation
+        AccountingClerkFaxNumber:
+          type: string
+          nullable: true
+          maxLength: 31
+          title: Acctg clerk's fax
+          description: Accounting clerk's fax number at the customer/vendor
+        AccountingClerkPhoneNumber:
+          type: string
+          nullable: true
+          maxLength: 30
+          title: Acct.clerks tel.no.
+          description: Accounting clerk's telephone number at business partner
+        SupplierClerk:
+          type: string
+          nullable: true
+          maxLength: 15
+          title: Clerk at vendor
+        SupplierClerkURL:
+          type: string
+          nullable: true
+          maxLength: 130
+          title: Clrk's internet add.
+          description: Internet address of partner company clerk
+        PaymentMethodsList:
+          type: string
+          nullable: true
+          maxLength: 10
+          title: Payment Methods
+          description: List of Respected Payment Methods
+        PaymentReason:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Payment Reason
+        PaymentTerms:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Terms of Payment
+          description: Key for Terms of Payment
+        ClearCustomerSupplier:
+          type: boolean
+          nullable: true
+          title: Clearing with cust.
+          description: 'Indicator: Clearing between customer and vendor?'
+        IsToBeLocallyProcessed:
+          type: boolean
+          nullable: true
+          title: Local Processing
+          description: 'Indicator: Local Processing?'
+        ItemIsToBePaidSeparately:
+          type: boolean
+          nullable: true
+          title: Individual Payment
+          description: 'Indicator: Pay All Items Separately?'
+        PaymentIsToBeSentByEDI:
+          type: boolean
+          nullable: true
+          title: Pmnt advice by EDI
+          description: 'Indicator: Send Payment Advices by EDI'
+        HouseBank:
+          type: string
+          nullable: true
+          maxLength: 5
+          title: House Bank
+          description: Short Key for a House Bank
+        CheckPaidDurationInDays:
+          type: string
+          nullable: true
+          format: decimal
+          x-sap-precision: 3
+          x-sap-scale: 0
+          multipleOf: 1
+          minimum: -999
+          maximum: 999
+          example: '0'
+          title: Check Cashing Time
+          description: Probable Time Until Check Is Paid
+        Currency:
+          type: string
+          nullable: true
+          maxLength: 5
+          title: Currency
+          description: Currency Key
+        BillOfExchLmtAmtInCoCodeCrcy:
+          type: string
+          nullable: true
+          format: decimal
+          x-sap-precision: 14
+          x-sap-scale: 3
+          multipleOf: 0.001
+          minimum: -9.9999999999999E10
+          maximum: 9.9999999999999E10
+          example: '0'
+          title: Bill/Ex. Limit
+          description: Bill of Exchange Limit (in Local Currency)
+        SupplierClerkIDBySupplier:
+          type: string
+          nullable: true
+          maxLength: 12
+          title: Account with vendor
+          description: Our account number with the vendor
+        ReconciliationAccount:
+          type: string
+          nullable: true
+          maxLength: 10
+          title: Reconciliation Acct
+          description: Reconciliation Account in General Ledger
+        InterestCalculationCode:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: Interest Indicator
+        InterestCalculationDate:
+          type: string
+          nullable: true
+          example: /Date(1492041600000)/
+          title: Last Key Date
+          description: Key Date of Last Interest Calculation
+        IntrstCalcFrequencyInMonths:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: Int.Calc.Freq.
+          description: Interest Calculation Frequency in Months
+        SupplierHeadOffice:
+          type: string
+          nullable: true
+          maxLength: 10
+          title: Head Office
+          description: Head Office Account Number
+        AlternativePayee:
+          type: string
+          nullable: true
+          maxLength: 10
+          title: Alternative payee
+          description: Account number of the alternative payee
+        LayoutSortingRule:
+          type: string
+          nullable: true
+          maxLength: 3
+          title: Sort Key
+          description: Key for Sorting According to Assignment Numbers
+        APARToleranceGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Tolerance Group
+          description: Tolerance Group for Business Partner/G/L Account
+        SupplierCertificationDate:
+          type: string
+          nullable: true
+          example: /Date(1492041600000)/
+          title: Certification Date
+        SupplierAccountNote:
+          type: string
+          nullable: true
+          maxLength: 30
+          title: Account Memo
+          description: Memo
+        WithholdingTaxCountry:
+          type: string
+          nullable: true
+          maxLength: 3
+          title: WTax C/R Key
+          description: Withholding Tax Country/Region Key
+        DeletionIndicator:
+          type: boolean
+          nullable: true
+          title: Co.Cde Deletion Flag
+          description: Deletion Flag for Master Record (Company Code Level)
+        CashPlanningGroup:
+          type: string
+          nullable: true
+          maxLength: 10
+          title: Planning Group
+        IsToBeCheckedForDuplicates:
+          type: boolean
+          nullable: true
+          title: Check Double Invoice
+          description: Check Flag for Double Invoices or Credit Memos
+        MinorityGroup:
+          type: string
+          nullable: true
+          maxLength: 3
+          title: Minority Indicator
+        SupplierAccountGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Account Group
+          description: Supplier Account Group
+      title: Supplier Company (for update)
+    API_BUSINESS_PARTNER.A_SupplierCompanyTextType:
+      type: object
+      properties:
+        Supplier:
+          type: string
+          maxLength: 10
+          title: Supplier
+          description: Account Number of Supplier
+        CompanyCode:
+          type: string
+          maxLength: 4
+          title: Company Code
+        Language:
+          type: string
+          maxLength: 2
+          title: Language
+          description: Language key
+        LongTextID:
+          type: string
+          maxLength: 4
+          title: Text ID
+        LongText:
+          type: string
+          nullable: true
+          title: String
+      title: Supplier Company Text
+    API_BUSINESS_PARTNER.A_SupplierCompanyTextType-create:
+      type: object
+      properties:
+        Supplier:
+          type: string
+          maxLength: 10
+          title: Supplier
+          description: Account Number of Supplier
+        CompanyCode:
+          type: string
+          maxLength: 4
+          title: Company Code
+        Language:
+          type: string
+          maxLength: 2
+          title: Language
+          description: Language key
+        LongTextID:
+          type: string
+          maxLength: 4
+          title: Text ID
+      required:
+      - Supplier
+      - CompanyCode
+      - Language
+      - LongTextID
+      title: Supplier Company Text (for create)
+    API_BUSINESS_PARTNER.A_SupplierCompanyTextType-update:
+      type: object
+      title: Supplier Company Text (for update)
+    API_BUSINESS_PARTNER.A_SupplierDunningType:
+      type: object
+      properties:
+        Supplier:
+          type: string
+          maxLength: 10
+          title: Supplier
+          description: Account Number of Supplier
+        CompanyCode:
+          type: string
+          maxLength: 4
+          title: Company Code
+        DunningArea:
+          type: string
+          maxLength: 2
+          title: Dunning Area
+        DunningBlock:
+          type: string
+          nullable: true
+          maxLength: 1
+          title: Dunning Block
+        DunningLevel:
+          type: string
+          nullable: true
+          maxLength: 1
+          title: Dunning Level
+        DunningProcedure:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Dunning Procedure
+        DunningRecipient:
+          type: string
+          nullable: true
+          maxLength: 10
+          title: Dunn.recipient
+          description: Account number of the dunning recipient
+        LastDunnedOn:
+          type: string
+          nullable: true
+          example: /Date(1492041600000)/
+          title: Last Dunned
+          description: Date of Last Dunning Notice
+        LegDunningProcedureOn:
+          type: string
+          nullable: true
+          example: /Date(1492041600000)/
+          title: Legal Dunn.Proc.From
+          description: Date of the Legal Dunning Proceedings
+        DunningClerk:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: Dunning Clerk
+        AuthorizationGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Authorization
+          description: Authorization Group
+        SupplierAccountGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Account Group
+          description: Supplier Account Group
+      title: Supplier Dunning
+    API_BUSINESS_PARTNER.A_SupplierDunningType-create:
+      type: object
+      properties:
+        Supplier:
+          type: string
+          maxLength: 10
+          title: Supplier
+          description: Account Number of Supplier
+        CompanyCode:
+          type: string
+          maxLength: 4
+          title: Company Code
+        DunningArea:
+          type: string
+          maxLength: 2
+          title: Dunning Area
+        DunningBlock:
+          type: string
+          nullable: true
+          maxLength: 1
+          title: Dunning Block
+        DunningLevel:
+          type: string
+          nullable: true
+          maxLength: 1
+          title: Dunning Level
+        DunningProcedure:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Dunning Procedure
+        DunningRecipient:
+          type: string
+          nullable: true
+          maxLength: 10
+          title: Dunn.recipient
+          description: Account number of the dunning recipient
+        LastDunnedOn:
+          type: string
+          nullable: true
+          example: /Date(1492041600000)/
+          title: Last Dunned
+          description: Date of Last Dunning Notice
+        LegDunningProcedureOn:
+          type: string
+          nullable: true
+          example: /Date(1492041600000)/
+          title: Legal Dunn.Proc.From
+          description: Date of the Legal Dunning Proceedings
+        DunningClerk:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: Dunning Clerk
+        AuthorizationGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Authorization
+          description: Authorization Group
+        SupplierAccountGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Account Group
+          description: Supplier Account Group
+      required:
+      - Supplier
+      - CompanyCode
+      - DunningArea
+      title: Supplier Dunning (for create)
+    API_BUSINESS_PARTNER.A_SupplierDunningType-update:
+      type: object
+      properties:
+        DunningBlock:
+          type: string
+          nullable: true
+          maxLength: 1
+          title: Dunning Block
+        DunningLevel:
+          type: string
+          nullable: true
+          maxLength: 1
+          title: Dunning Level
+        DunningProcedure:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Dunning Procedure
+        DunningRecipient:
+          type: string
+          nullable: true
+          maxLength: 10
+          title: Dunn.recipient
+          description: Account number of the dunning recipient
+        LastDunnedOn:
+          type: string
+          nullable: true
+          example: /Date(1492041600000)/
+          title: Last Dunned
+          description: Date of Last Dunning Notice
+        LegDunningProcedureOn:
+          type: string
+          nullable: true
+          example: /Date(1492041600000)/
+          title: Legal Dunn.Proc.From
+          description: Date of the Legal Dunning Proceedings
+        DunningClerk:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: Dunning Clerk
+        AuthorizationGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Authorization
+          description: Authorization Group
+        SupplierAccountGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Account Group
+          description: Supplier Account Group
+      title: Supplier Dunning (for update)
+    API_BUSINESS_PARTNER.A_SupplierPartnerFuncType:
+      type: object
+      properties:
+        Supplier:
+          type: string
+          maxLength: 10
+          title: Supplier
+          description: Account Number of Supplier
+        PurchasingOrganization:
+          type: string
+          maxLength: 4
+          title: Purch. Organization
+          description: Purchasing Organization
+        SupplierSubrange:
+          type: string
+          maxLength: 6
+          title: Supplier Subrange
+        Plant:
+          type: string
+          maxLength: 4
+          title: Plant
+        PartnerFunction:
+          type: string
+          maxLength: 2
+          title: Partner Function
+        PartnerCounter:
+          type: string
+          maxLength: 3
+          title: Partner counter
+        DefaultPartner:
+          type: boolean
+          nullable: true
+          title: Default Partner
+        CreationDate:
+          type: string
+          nullable: true
+          example: /Date(1492041600000)/
+          title: Created On
+          description: Record Creation Date
+        CreatedByUser:
+          type: string
+          nullable: true
+          maxLength: 12
+          title: Created By
+          description: Name of Person Responsible for Creating the Object
+        ReferenceSupplier:
+          type: string
+          nullable: true
+          maxLength: 10
+          title: Ref. to suplr
+          description: Reference to other supplier
+        AuthorizationGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Authorization
+          description: Authorization Group
+      title: Purchasing Partner Functions
+    API_BUSINESS_PARTNER.A_SupplierPartnerFuncType-create:
+      type: object
+      properties:
+        Supplier:
+          type: string
+          maxLength: 10
+          title: Supplier
+          description: Account Number of Supplier
+        PurchasingOrganization:
+          type: string
+          maxLength: 4
+          title: Purch. Organization
+          description: Purchasing Organization
+        SupplierSubrange:
+          type: string
+          maxLength: 6
+          title: Supplier Subrange
+        Plant:
+          type: string
+          maxLength: 4
+          title: Plant
+        PartnerFunction:
+          type: string
+          maxLength: 2
+          title: Partner Function
+        PartnerCounter:
+          type: string
+          maxLength: 3
+          title: Partner counter
+        DefaultPartner:
+          type: boolean
+          nullable: true
+          title: Default Partner
+        ReferenceSupplier:
+          type: string
+          nullable: true
+          maxLength: 10
+          title: Ref. to suplr
+          description: Reference to other supplier
+        AuthorizationGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Authorization
+          description: Authorization Group
+      required:
+      - Supplier
+      - PurchasingOrganization
+      - SupplierSubrange
+      - Plant
+      - PartnerFunction
+      - PartnerCounter
+      title: Purchasing Partner Functions (for create)
+    API_BUSINESS_PARTNER.A_SupplierPartnerFuncType-update:
+      type: object
+      properties:
+        DefaultPartner:
+          type: boolean
+          nullable: true
+          title: Default Partner
+        ReferenceSupplier:
+          type: string
+          nullable: true
+          maxLength: 10
+          title: Ref. to suplr
+          description: Reference to other supplier
+        AuthorizationGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Authorization
+          description: Authorization Group
+      title: Purchasing Partner Functions (for update)
+    API_BUSINESS_PARTNER.A_SupplierPurchasingOrgType:
+      type: object
+      properties:
+        Supplier:
+          type: string
+          maxLength: 10
+          title: Supplier
+          description: Supplier's Account Number
+        PurchasingOrganization:
+          type: string
+          maxLength: 4
+          title: Purch. Organization
+          description: Purchasing Organization
+        AutomaticEvaluatedRcptSettlmt:
+          type: boolean
+          nullable: true
+          title: Aut. ev. GRSetmt.Ret
+          description: Automatic evaluated receipt settlement for return items
+        CalculationSchemaGroupCode:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: Schema Grp, Supplier
+          description: Group for Calculation Schema (Supplier)
+        DeletionIndicator:
+          type: boolean
+          nullable: true
+          title: Del. flag POrg.
+          description: Deletion Indicator for Supplier at Purchasing Level
+        EvaldReceiptSettlementIsActive:
+          type: boolean
+          nullable: true
+          title: Eval. Receipt Sett.
+          description: Evaluated Receipt Settlement (ERS)
+        IncotermsClassification:
+          type: string
+          nullable: true
+          maxLength: 3
+          title: Incoterms
+          description: Incoterms (Part 1)
+        IncotermsTransferLocation:
+          type: string
+          nullable: true
+          maxLength: 28
+          title: Incoterms (Part 2)
+        IncotermsVersion:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Incoterms Version
+        IncotermsLocation1:
+          type: string
+          nullable: true
+          maxLength: 70
+          title: Incoterms Location 1
+        IncotermsLocation2:
+          type: string
+          nullable: true
+          maxLength: 70
+          title: Incoterms Location 2
+        IncotermsSupChnLoc1AddlUUID:
+          type: string
+          nullable: true
+          format: uuid
+          example: 01234567-89ab-cdef-0123-456789abcdef
+          title: Location UUID
+        IncotermsSupChnLoc2AddlUUID:
+          type: string
+          nullable: true
+          format: uuid
+          example: 01234567-89ab-cdef-0123-456789abcdef
+          title: Location UUID
+        IncotermsSupChnDvtgLocAddlUUID:
+          type: string
+          nullable: true
+          format: uuid
+          example: 01234567-89ab-cdef-0123-456789abcdef
+          title: Location UUID
+        IntrastatCrsBorderTrMode:
+          type: string
+          nullable: true
+          maxLength: 1
+          title: Mode of Transport
+          description: Mode of Transport at the Border (Intrastat)
+        InvoiceIsGoodsReceiptBased:
+          type: boolean
+          nullable: true
+          title: GR-Based Inv. Verif.
+          description: 'Indicator: GR-Based Invoice Verification'
+        InvoiceIsMMServiceEntryBased:
+          type: boolean
+          nullable: true
+          title: Srv.-Based Inv. Ver.
+          description: Indicator for Service-Based Invoice Verification
+        MaterialPlannedDeliveryDurn:
+          type: string
+          nullable: true
+          format: decimal
+          x-sap-precision: 3
+          x-sap-scale: 0
+          multipleOf: 1
+          minimum: -999
+          maximum: 999
+          example: '0'
+          title: Planned Deliv. Time
+          description: Planned Delivery Time in Days
+        MinimumOrderAmount:
+          type: string
+          nullable: true
+          format: decimal
+          x-sap-precision: 14
+          x-sap-scale: 3
+          multipleOf: 0.001
+          minimum: -9.9999999999999E10
+          maximum: 9.9999999999999E10
+          example: '0'
+          title: Minimum order value
+        PaymentTerms:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Terms of Payment
+          description: Key for Terms of Payment
+        PlanningCycle:
+          type: string
+          nullable: true
+          maxLength: 3
+          title: Planning Cycle
+        PricingDateControl:
+          type: string
+          nullable: true
+          maxLength: 1
+          title: Pricing Date Control
+          description: Price Determination (Pricing) Date Control
+        ProdStockAndSlsDataTransfPrfl:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: PROACT control prof.
+          description: Profile for transferring material data via IDoc PROACT
+        ProductUnitGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Unit of Measure Grp
+          description: Unit of Measure Group
+        PurOrdAutoGenerationIsAllowed:
+          type: boolean
+          nullable: true
+          title: Automatic PO
+          description: Automatic Generation of Purchase Order Allowed
+        PurchaseOrderCurrency:
+          type: string
+          nullable: true
+          maxLength: 5
+          title: Order currency
+          description: Purchase order currency
+        PurchasingGroup:
+          type: string
+          nullable: true
+          maxLength: 3
+          title: Purchasing Group
+        PurchasingIsBlockedForSupplier:
+          type: boolean
+          nullable: true
+          title: Pur. block POrg
+          description: Purchasing block at purchasing organization level
+        RoundingProfile:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Rounding Profile
+        ShippingCondition:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: Shipping Conditions
+        SuplrDiscountInKindIsGranted:
+          type: boolean
+          nullable: true
+          title: Checkbox
+        SuplrInvcRevalIsAllowed:
+          type: boolean
+          nullable: true
+          title: Revaluation
+          description: Revaluation allowed
+        SuplrIsRlvtForSettlmtMgmt:
+          type: boolean
+          nullable: true
+          title: Settlement Mgmt.
+          description: 'Indicator: Relevant for Settlement Management'
+        SuplrPurgOrgIsRlvtForPriceDetn:
+          type: boolean
+          nullable: true
+          title: Price determination
+          description: 'Indicator: "relev. to price determination (vend. hierarchy)'
+        SupplierABCClassificationCode:
+          type: string
+          nullable: true
+          maxLength: 1
+          title: ABC indicator
+        SupplierAccountNumber:
+          type: string
+          nullable: true
+          maxLength: 12
+          title: Acc. with supplier
+          description: Our account number with the supplier
+        SupplierIsReturnsSupplier:
+          type: boolean
+          nullable: true
+          title: Returns supplier
+          description: Indicates whether supplier is returns supplier
+        SupplierPhoneNumber:
+          type: string
+          nullable: true
+          maxLength: 16
+          title: Telephone
+          description: Supplier's Telephone Number
+        SupplierRespSalesPersonName:
+          type: string
+          nullable: true
+          maxLength: 30
+          title: Salesperson
+          description: Responsible Salesperson at Supplier's Office
+        SupplierConfirmationControlKey:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Confirmation Control
+          description: Confirmation Control Key
+        IsOrderAcknRqd:
+          type: boolean
+          nullable: true
+          title: Acknowledgment Reqd.
+          description: Order Acknowledgment Requirement
+        AuthorizationGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Authorization
+          description: Authorization Group
+        SupplierAccountGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Account Group
+          description: Supplier Account Group
+        to_PartnerFunction:
+          type: object
+          properties:
+            results:
+              type: array
+              items:
+                $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierPartnerFuncType'
+        to_PurchasingOrgText:
+          type: object
+          properties:
+            results:
+              type: array
+              items:
+                $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierPurchasingOrgTextType'
+      title: Purchasing Organization
+    API_BUSINESS_PARTNER.A_SupplierPurchasingOrgType-create:
+      type: object
+      properties:
+        Supplier:
+          type: string
+          maxLength: 10
+          title: Supplier
+          description: Supplier's Account Number
+        PurchasingOrganization:
+          type: string
+          maxLength: 4
+          title: Purch. Organization
+          description: Purchasing Organization
+        AutomaticEvaluatedRcptSettlmt:
+          type: boolean
+          nullable: true
+          title: Aut. ev. GRSetmt.Ret
+          description: Automatic evaluated receipt settlement for return items
+        CalculationSchemaGroupCode:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: Schema Grp, Supplier
+          description: Group for Calculation Schema (Supplier)
+        DeletionIndicator:
+          type: boolean
+          nullable: true
+          title: Del. flag POrg.
+          description: Deletion Indicator for Supplier at Purchasing Level
+        EvaldReceiptSettlementIsActive:
+          type: boolean
+          nullable: true
+          title: Eval. Receipt Sett.
+          description: Evaluated Receipt Settlement (ERS)
+        IncotermsClassification:
+          type: string
+          nullable: true
+          maxLength: 3
+          title: Incoterms
+          description: Incoterms (Part 1)
+        IncotermsTransferLocation:
+          type: string
+          nullable: true
+          maxLength: 28
+          title: Incoterms (Part 2)
+        IncotermsVersion:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Incoterms Version
+        IncotermsLocation1:
+          type: string
+          nullable: true
+          maxLength: 70
+          title: Incoterms Location 1
+        IncotermsLocation2:
+          type: string
+          nullable: true
+          maxLength: 70
+          title: Incoterms Location 2
+        IncotermsSupChnLoc1AddlUUID:
+          type: string
+          nullable: true
+          format: uuid
+          example: 01234567-89ab-cdef-0123-456789abcdef
+          title: Location UUID
+        IncotermsSupChnLoc2AddlUUID:
+          type: string
+          nullable: true
+          format: uuid
+          example: 01234567-89ab-cdef-0123-456789abcdef
+          title: Location UUID
+        IncotermsSupChnDvtgLocAddlUUID:
+          type: string
+          nullable: true
+          format: uuid
+          example: 01234567-89ab-cdef-0123-456789abcdef
+          title: Location UUID
+        IntrastatCrsBorderTrMode:
+          type: string
+          nullable: true
+          maxLength: 1
+          title: Mode of Transport
+          description: Mode of Transport at the Border (Intrastat)
+        InvoiceIsGoodsReceiptBased:
+          type: boolean
+          nullable: true
+          title: GR-Based Inv. Verif.
+          description: 'Indicator: GR-Based Invoice Verification'
+        InvoiceIsMMServiceEntryBased:
+          type: boolean
+          nullable: true
+          title: Srv.-Based Inv. Ver.
+          description: Indicator for Service-Based Invoice Verification
+        MaterialPlannedDeliveryDurn:
+          type: string
+          nullable: true
+          format: decimal
+          x-sap-precision: 3
+          x-sap-scale: 0
+          multipleOf: 1
+          minimum: -999
+          maximum: 999
+          example: '0'
+          title: Planned Deliv. Time
+          description: Planned Delivery Time in Days
+        MinimumOrderAmount:
+          type: string
+          nullable: true
+          format: decimal
+          x-sap-precision: 14
+          x-sap-scale: 3
+          multipleOf: 0.001
+          minimum: -9.9999999999999E10
+          maximum: 9.9999999999999E10
+          example: '0'
+          title: Minimum order value
+        PaymentTerms:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Terms of Payment
+          description: Key for Terms of Payment
+        PlanningCycle:
+          type: string
+          nullable: true
+          maxLength: 3
+          title: Planning Cycle
+        PricingDateControl:
+          type: string
+          nullable: true
+          maxLength: 1
+          title: Pricing Date Control
+          description: Price Determination (Pricing) Date Control
+        ProdStockAndSlsDataTransfPrfl:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: PROACT control prof.
+          description: Profile for transferring material data via IDoc PROACT
+        ProductUnitGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Unit of Measure Grp
+          description: Unit of Measure Group
+        PurOrdAutoGenerationIsAllowed:
+          type: boolean
+          nullable: true
+          title: Automatic PO
+          description: Automatic Generation of Purchase Order Allowed
+        PurchaseOrderCurrency:
+          type: string
+          nullable: true
+          maxLength: 5
+          title: Order currency
+          description: Purchase order currency
+        PurchasingGroup:
+          type: string
+          nullable: true
+          maxLength: 3
+          title: Purchasing Group
+        PurchasingIsBlockedForSupplier:
+          type: boolean
+          nullable: true
+          title: Pur. block POrg
+          description: Purchasing block at purchasing organization level
+        RoundingProfile:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Rounding Profile
+        ShippingCondition:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: Shipping Conditions
+        SuplrDiscountInKindIsGranted:
+          type: boolean
+          nullable: true
+          title: Checkbox
+        SuplrInvcRevalIsAllowed:
+          type: boolean
+          nullable: true
+          title: Revaluation
+          description: Revaluation allowed
+        SuplrIsRlvtForSettlmtMgmt:
+          type: boolean
+          nullable: true
+          title: Settlement Mgmt.
+          description: 'Indicator: Relevant for Settlement Management'
+        SuplrPurgOrgIsRlvtForPriceDetn:
+          type: boolean
+          nullable: true
+          title: Price determination
+          description: 'Indicator: "relev. to price determination (vend. hierarchy)'
+        SupplierABCClassificationCode:
+          type: string
+          nullable: true
+          maxLength: 1
+          title: ABC indicator
+        SupplierAccountNumber:
+          type: string
+          nullable: true
+          maxLength: 12
+          title: Acc. with supplier
+          description: Our account number with the supplier
+        SupplierIsReturnsSupplier:
+          type: boolean
+          nullable: true
+          title: Returns supplier
+          description: Indicates whether supplier is returns supplier
+        SupplierPhoneNumber:
+          type: string
+          nullable: true
+          maxLength: 16
+          title: Telephone
+          description: Supplier's Telephone Number
+        SupplierRespSalesPersonName:
+          type: string
+          nullable: true
+          maxLength: 30
+          title: Salesperson
+          description: Responsible Salesperson at Supplier's Office
+        SupplierConfirmationControlKey:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Confirmation Control
+          description: Confirmation Control Key
+        IsOrderAcknRqd:
+          type: boolean
+          nullable: true
+          title: Acknowledgment Reqd.
+          description: Order Acknowledgment Requirement
+        AuthorizationGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Authorization
+          description: Authorization Group
+        SupplierAccountGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Account Group
+          description: Supplier Account Group
+        to_PartnerFunction:
+          type: object
+          properties:
+            results:
+              type: array
+              items:
+                $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierPartnerFuncType-create'
+        to_PurchasingOrgText:
+          type: object
+          properties:
+            results:
+              type: array
+              items:
+                $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierPurchasingOrgTextType-create'
+      required:
+      - Supplier
+      - PurchasingOrganization
+      title: Purchasing Organization (for create)
+    API_BUSINESS_PARTNER.A_SupplierPurchasingOrgType-update:
+      type: object
+      properties:
+        AutomaticEvaluatedRcptSettlmt:
+          type: boolean
+          nullable: true
+          title: Aut. ev. GRSetmt.Ret
+          description: Automatic evaluated receipt settlement for return items
+        CalculationSchemaGroupCode:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: Schema Grp, Supplier
+          description: Group for Calculation Schema (Supplier)
+        DeletionIndicator:
+          type: boolean
+          nullable: true
+          title: Del. flag POrg.
+          description: Deletion Indicator for Supplier at Purchasing Level
+        EvaldReceiptSettlementIsActive:
+          type: boolean
+          nullable: true
+          title: Eval. Receipt Sett.
+          description: Evaluated Receipt Settlement (ERS)
+        IncotermsClassification:
+          type: string
+          nullable: true
+          maxLength: 3
+          title: Incoterms
+          description: Incoterms (Part 1)
+        IncotermsTransferLocation:
+          type: string
+          nullable: true
+          maxLength: 28
+          title: Incoterms (Part 2)
+        IncotermsVersion:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Incoterms Version
+        IncotermsLocation1:
+          type: string
+          nullable: true
+          maxLength: 70
+          title: Incoterms Location 1
+        IncotermsLocation2:
+          type: string
+          nullable: true
+          maxLength: 70
+          title: Incoterms Location 2
+        IncotermsSupChnLoc1AddlUUID:
+          type: string
+          nullable: true
+          format: uuid
+          example: 01234567-89ab-cdef-0123-456789abcdef
+          title: Location UUID
+        IncotermsSupChnLoc2AddlUUID:
+          type: string
+          nullable: true
+          format: uuid
+          example: 01234567-89ab-cdef-0123-456789abcdef
+          title: Location UUID
+        IncotermsSupChnDvtgLocAddlUUID:
+          type: string
+          nullable: true
+          format: uuid
+          example: 01234567-89ab-cdef-0123-456789abcdef
+          title: Location UUID
+        IntrastatCrsBorderTrMode:
+          type: string
+          nullable: true
+          maxLength: 1
+          title: Mode of Transport
+          description: Mode of Transport at the Border (Intrastat)
+        InvoiceIsGoodsReceiptBased:
+          type: boolean
+          nullable: true
+          title: GR-Based Inv. Verif.
+          description: 'Indicator: GR-Based Invoice Verification'
+        InvoiceIsMMServiceEntryBased:
+          type: boolean
+          nullable: true
+          title: Srv.-Based Inv. Ver.
+          description: Indicator for Service-Based Invoice Verification
+        MaterialPlannedDeliveryDurn:
+          type: string
+          nullable: true
+          format: decimal
+          x-sap-precision: 3
+          x-sap-scale: 0
+          multipleOf: 1
+          minimum: -999
+          maximum: 999
+          example: '0'
+          title: Planned Deliv. Time
+          description: Planned Delivery Time in Days
+        MinimumOrderAmount:
+          type: string
+          nullable: true
+          format: decimal
+          x-sap-precision: 14
+          x-sap-scale: 3
+          multipleOf: 0.001
+          minimum: -9.9999999999999E10
+          maximum: 9.9999999999999E10
+          example: '0'
+          title: Minimum order value
+        PaymentTerms:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Terms of Payment
+          description: Key for Terms of Payment
+        PlanningCycle:
+          type: string
+          nullable: true
+          maxLength: 3
+          title: Planning Cycle
+        PricingDateControl:
+          type: string
+          nullable: true
+          maxLength: 1
+          title: Pricing Date Control
+          description: Price Determination (Pricing) Date Control
+        ProdStockAndSlsDataTransfPrfl:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: PROACT control prof.
+          description: Profile for transferring material data via IDoc PROACT
+        ProductUnitGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Unit of Measure Grp
+          description: Unit of Measure Group
+        PurOrdAutoGenerationIsAllowed:
+          type: boolean
+          nullable: true
+          title: Automatic PO
+          description: Automatic Generation of Purchase Order Allowed
+        PurchaseOrderCurrency:
+          type: string
+          nullable: true
+          maxLength: 5
+          title: Order currency
+          description: Purchase order currency
+        PurchasingGroup:
+          type: string
+          nullable: true
+          maxLength: 3
+          title: Purchasing Group
+        PurchasingIsBlockedForSupplier:
+          type: boolean
+          nullable: true
+          title: Pur. block POrg
+          description: Purchasing block at purchasing organization level
+        RoundingProfile:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Rounding Profile
+        ShippingCondition:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: Shipping Conditions
+        SuplrDiscountInKindIsGranted:
+          type: boolean
+          nullable: true
+          title: Checkbox
+        SuplrInvcRevalIsAllowed:
+          type: boolean
+          nullable: true
+          title: Revaluation
+          description: Revaluation allowed
+        SuplrIsRlvtForSettlmtMgmt:
+          type: boolean
+          nullable: true
+          title: Settlement Mgmt.
+          description: 'Indicator: Relevant for Settlement Management'
+        SuplrPurgOrgIsRlvtForPriceDetn:
+          type: boolean
+          nullable: true
+          title: Price determination
+          description: 'Indicator: "relev. to price determination (vend. hierarchy)'
+        SupplierABCClassificationCode:
+          type: string
+          nullable: true
+          maxLength: 1
+          title: ABC indicator
+        SupplierAccountNumber:
+          type: string
+          nullable: true
+          maxLength: 12
+          title: Acc. with supplier
+          description: Our account number with the supplier
+        SupplierIsReturnsSupplier:
+          type: boolean
+          nullable: true
+          title: Returns supplier
+          description: Indicates whether supplier is returns supplier
+        SupplierPhoneNumber:
+          type: string
+          nullable: true
+          maxLength: 16
+          title: Telephone
+          description: Supplier's Telephone Number
+        SupplierRespSalesPersonName:
+          type: string
+          nullable: true
+          maxLength: 30
+          title: Salesperson
+          description: Responsible Salesperson at Supplier's Office
+        SupplierConfirmationControlKey:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Confirmation Control
+          description: Confirmation Control Key
+        IsOrderAcknRqd:
+          type: boolean
+          nullable: true
+          title: Acknowledgment Reqd.
+          description: Order Acknowledgment Requirement
+        AuthorizationGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Authorization
+          description: Authorization Group
+        SupplierAccountGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Account Group
+          description: Supplier Account Group
+      title: Purchasing Organization (for update)
+    API_BUSINESS_PARTNER.A_SupplierPurchasingOrgTextType:
+      type: object
+      properties:
+        Supplier:
+          type: string
+          maxLength: 10
+          title: Supplier
+          description: Account Number of Supplier
+        PurchasingOrganization:
+          type: string
+          maxLength: 4
+          title: Purch. Organization
+          description: Purchasing Organization
+        Language:
+          type: string
+          maxLength: 2
+          title: Language
+          description: Language key
+        LongTextID:
+          type: string
+          maxLength: 4
+          title: Text ID
+        LongText:
+          type: string
+          nullable: true
+          title: String
+      title: Purchasing Organization Text
+    API_BUSINESS_PARTNER.A_SupplierPurchasingOrgTextType-create:
+      type: object
+      properties:
+        Supplier:
+          type: string
+          maxLength: 10
+          title: Supplier
+          description: Account Number of Supplier
+        PurchasingOrganization:
+          type: string
+          maxLength: 4
+          title: Purch. Organization
+          description: Purchasing Organization
+        Language:
+          type: string
+          maxLength: 2
+          title: Language
+          description: Language key
+        LongTextID:
+          type: string
+          maxLength: 4
+          title: Text ID
+      required:
+      - Supplier
+      - PurchasingOrganization
+      - Language
+      - LongTextID
+      title: Purchasing Organization Text (for create)
+    API_BUSINESS_PARTNER.A_SupplierPurchasingOrgTextType-update:
+      type: object
+      title: Purchasing Organization Text (for update)
+    API_BUSINESS_PARTNER.A_SupplierTextType:
+      type: object
+      properties:
+        Supplier:
+          type: string
+          maxLength: 10
+          title: Supplier
+          description: Account Number of Supplier
+        Language:
+          type: string
+          maxLength: 2
+          title: Language
+          description: Language key
+        LongTextID:
+          type: string
+          maxLength: 4
+          title: Text ID
+        LongText:
+          type: string
+          nullable: true
+          title: String
+      title: Supplier Text
+    API_BUSINESS_PARTNER.A_SupplierTextType-create:
+      type: object
+      properties:
+        Supplier:
+          type: string
+          maxLength: 10
+          title: Supplier
+          description: Account Number of Supplier
+        Language:
+          type: string
+          maxLength: 2
+          title: Language
+          description: Language key
+        LongTextID:
+          type: string
+          maxLength: 4
+          title: Text ID
+      required:
+      - Supplier
+      - Language
+      - LongTextID
+      title: Supplier Text (for create)
+    API_BUSINESS_PARTNER.A_SupplierTextType-update:
+      type: object
+      title: Supplier Text (for update)
+    API_BUSINESS_PARTNER.A_SupplierWithHoldingTaxType:
+      type: object
+      properties:
+        Supplier:
+          type: string
+          maxLength: 10
+          title: Supplier
+          description: Account Number of Supplier
+        CompanyCode:
+          type: string
+          maxLength: 4
+          title: Company Code
+        WithholdingTaxType:
+          type: string
+          maxLength: 2
+          title: Withholding Tax Type
+          description: Indicator for Withholding Tax Type
+        ExemptionDateBegin:
+          type: string
+          nullable: true
+          example: /Date(1492041600000)/
+          title: Exemption Start Date
+          description: Date on Which Exemption Begins
+        ExemptionDateEnd:
+          type: string
+          nullable: true
+          example: /Date(1492041600000)/
+          title: Exemption End Date
+          description: Date on Which Exemption Ends
+        ExemptionReason:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: Exemption Reason
+          description: Reason for Exemption
+        IsWithholdingTaxSubject:
+          type: boolean
+          nullable: true
+          title: Subject to W/Tx
+          description: 'Indicator: Subject to Withholding Tax?'
+        RecipientType:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: Recipient Type
+          description: Type of Recipient
+        WithholdingTaxCertificate:
+          type: string
+          nullable: true
+          maxLength: 25
+          title: Exemption Number
+          description: Exemption Certificate Number
+        WithholdingTaxCode:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: W/Tax Code
+          description: Withholding Tax Code
+        WithholdingTaxExmptPercent:
+          type: string
+          nullable: true
+          format: decimal
+          x-sap-precision: 5
+          x-sap-scale: 2
+          multipleOf: 0.01
+          minimum: -999.99
+          maximum: 999.99
+          example: '0'
+          title: Exemption Rate
+        WithholdingTaxNumber:
+          type: string
+          nullable: true
+          maxLength: 16
+          title: W/tax number
+          description: Withholding tax identification number
+        AuthorizationGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Authorization
+          description: Authorization Group
+      title: Company Withholding Tax
+    API_BUSINESS_PARTNER.A_SupplierWithHoldingTaxType-create:
+      type: object
+      properties:
+        Supplier:
+          type: string
+          maxLength: 10
+          title: Supplier
+          description: Account Number of Supplier
+        CompanyCode:
+          type: string
+          maxLength: 4
+          title: Company Code
+        WithholdingTaxType:
+          type: string
+          maxLength: 2
+          title: Withholding Tax Type
+          description: Indicator for Withholding Tax Type
+        ExemptionDateBegin:
+          type: string
+          nullable: true
+          example: /Date(1492041600000)/
+          title: Exemption Start Date
+          description: Date on Which Exemption Begins
+        ExemptionDateEnd:
+          type: string
+          nullable: true
+          example: /Date(1492041600000)/
+          title: Exemption End Date
+          description: Date on Which Exemption Ends
+        ExemptionReason:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: Exemption Reason
+          description: Reason for Exemption
+        IsWithholdingTaxSubject:
+          type: boolean
+          nullable: true
+          title: Subject to W/Tx
+          description: 'Indicator: Subject to Withholding Tax?'
+        RecipientType:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: Recipient Type
+          description: Type of Recipient
+        WithholdingTaxCertificate:
+          type: string
+          nullable: true
+          maxLength: 25
+          title: Exemption Number
+          description: Exemption Certificate Number
+        WithholdingTaxCode:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: W/Tax Code
+          description: Withholding Tax Code
+        WithholdingTaxExmptPercent:
+          type: string
+          nullable: true
+          format: decimal
+          x-sap-precision: 5
+          x-sap-scale: 2
+          multipleOf: 0.01
+          minimum: -999.99
+          maximum: 999.99
+          example: '0'
+          title: Exemption Rate
+        WithholdingTaxNumber:
+          type: string
+          nullable: true
+          maxLength: 16
+          title: W/tax number
+          description: Withholding tax identification number
+        AuthorizationGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Authorization
+          description: Authorization Group
+      required:
+      - Supplier
+      - CompanyCode
+      - WithholdingTaxType
+      title: Company Withholding Tax (for create)
+    API_BUSINESS_PARTNER.A_SupplierWithHoldingTaxType-update:
+      type: object
+      properties:
+        ExemptionDateBegin:
+          type: string
+          nullable: true
+          example: /Date(1492041600000)/
+          title: Exemption Start Date
+          description: Date on Which Exemption Begins
+        ExemptionDateEnd:
+          type: string
+          nullable: true
+          example: /Date(1492041600000)/
+          title: Exemption End Date
+          description: Date on Which Exemption Ends
+        ExemptionReason:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: Exemption Reason
+          description: Reason for Exemption
+        IsWithholdingTaxSubject:
+          type: boolean
+          nullable: true
+          title: Subject to W/Tx
+          description: 'Indicator: Subject to Withholding Tax?'
+        RecipientType:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: Recipient Type
+          description: Type of Recipient
+        WithholdingTaxCertificate:
+          type: string
+          nullable: true
+          maxLength: 25
+          title: Exemption Number
+          description: Exemption Certificate Number
+        WithholdingTaxCode:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: W/Tax Code
+          description: Withholding Tax Code
+        WithholdingTaxExmptPercent:
+          type: string
+          nullable: true
+          format: decimal
+          x-sap-precision: 5
+          x-sap-scale: 2
+          multipleOf: 0.01
+          minimum: -999.99
+          maximum: 999.99
+          example: '0'
+          title: Exemption Rate
+        WithholdingTaxNumber:
+          type: string
+          nullable: true
+          maxLength: 16
+          title: W/tax number
+          description: Withholding tax identification number
+        AuthorizationGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Authorization
+          description: Authorization Group
+      title: Company Withholding Tax (for update)
+    count:
+      type: string
+      description: The number of entities in the collection. Available when using
+        the [$inlinecount](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=67)
+        query option.
+    error:
+      type: object
+      required:
+      - error
+      properties:
+        error:
+          type: object
+          required:
+          - code
+          - message
+          properties:
+            code:
+              type: string
+            message:
+              type: object
+              required:
+              - lang
+              - value
+              properties:
+                lang:
+                  type: string
+                value:
+                  type: string
+            innererror:
+              type: object
+              description: The structure of this object is service-specific
+  parameters:
+    top:
+      name: $top
+      in: query
+      description: Show only the first n items, see [Paging - Top](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=66)
+      schema:
+        type: integer
+        minimum: 0
+      example: 50
+    skip:
+      name: $skip
+      in: query
+      description: Skip the first n items, see [Paging - Skip](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=65)
+      schema:
+        type: integer
+        minimum: 0
+    count:
+      name: $inlinecount
+      in: query
+      description: Include count of items, see [Inlinecount](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=67)
+      schema:
+        type: string
+        enum:
+        - allpages
+        - none
+  responses:
+    error:
+      description: Error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+  securitySchemes:
+    OAuth2Auth:
+      type: oauth2
+      flows:
+        authorizationCode:
+          scopes:
+            API_BUSINESS_PARTNER_0001: ''
+          refreshUrl: https://{host}:{port}
+          authorizationUrl: https://{host}:{port}
+          tokenUrl: https://{host}:{port}
+    BasicAuth:
+      type: http
+      scheme: basic
+security:
+- OAuth2Auth:
+  - API_BUSINESS_PARTNER_0001
+- BasicAuth: []
