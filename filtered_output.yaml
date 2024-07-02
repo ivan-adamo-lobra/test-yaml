@@ -216,27 +216,6 @@ paths:
             - EmailAddress
             - SearchEmailAddress
             - AddressCommunicationRemarkText
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_AddressEmailAddressType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_AddressEmailAddressType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_AddressEmailAddress(AddressID='{AddressID}',Person='{Person}',OrdinalNumber='{OrdinalNumber}'):
     get:
       summary: Retrieves email address data by using key fields.
@@ -262,19 +241,6 @@ paths:
             - EmailAddress
             - SearchEmailAddress
             - AddressCommunicationRemarkText
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_AddressEmailAddressType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_AddressEmailAddressType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_AddressFaxNumber:
     get:
       summary: Retrieves fax address data linked to business partner address.
@@ -338,27 +304,6 @@ paths:
             - FaxNumberExtension
             - InternationalFaxNumber
             - AddressCommunicationRemarkText
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_AddressFaxNumberType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_AddressFaxNumberType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_AddressFaxNumber(AddressID='{AddressID}',Person='{Person}',OrdinalNumber='{OrdinalNumber}'):
     get:
       summary: Retrieves fax address records by key fields.
@@ -386,19 +331,6 @@ paths:
             - FaxNumberExtension
             - InternationalFaxNumber
             - AddressCommunicationRemarkText
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_AddressFaxNumberType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_AddressFaxNumberType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_AddressHomePageURL:
     get:
       summary: Retrieves home page URL address records linked to business partner
@@ -463,27 +395,6 @@ paths:
             - AddressCommunicationRemarkText
             - URLFieldLength
             - WebsiteURL
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_AddressHomePageURLType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_AddressHomePageURLType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_AddressHomePageURL(AddressID='{AddressID}',Person='{Person}',OrdinalNumber='{OrdinalNumber}',ValidityStartDate=datetime'{ValidityStartDate}',IsDefaultURLAddress={IsDefaultURLAddress})
   : get:
       summary: Retrieves home page URL address records by using key fields.
@@ -511,19 +422,6 @@ paths:
             - AddressCommunicationRemarkText
             - URLFieldLength
             - WebsiteURL
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_AddressHomePageURLType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_AddressHomePageURLType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_AddressPhoneNumber:
     get:
       summary: Retrieves mobile/telephone address records linked to business partner
@@ -591,27 +489,6 @@ paths:
             - InternationalPhoneNumber
             - PhoneNumberType
             - AddressCommunicationRemarkText
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_AddressPhoneNumberType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_AddressPhoneNumberType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_AddressPhoneNumber(AddressID='{AddressID}',Person='{Person}',OrdinalNumber='{OrdinalNumber}'):
     get:
       summary: Retrieves mobile/telephone address record by key fields.
@@ -640,19 +517,6 @@ paths:
             - InternationalPhoneNumber
             - PhoneNumberType
             - AddressCommunicationRemarkText
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_AddressPhoneNumberType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_AddressPhoneNumberType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BPAddrDepdntIntlLocNumber:
     get:
       summary: Retrieves address dependent data for the business partner address.
@@ -704,27 +568,6 @@ paths:
             - InternationalLocationNumber1
             - InternationalLocationNumber2
             - InternationalLocationNumber3
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BPAddrDepdntIntlLocNumberType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPAddrDepdntIntlLocNumberType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BPAddrDepdntIntlLocNumber(BusinessPartner='{BusinessPartner}',AddressID='{AddressID}'):
     get:
       summary: Retrieves address dependent data for the business partner address.
@@ -748,19 +591,6 @@ paths:
             - InternationalLocationNumber1
             - InternationalLocationNumber2
             - InternationalLocationNumber3
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BPAddrDepdntIntlLocNumberType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPAddrDepdntIntlLocNumberType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BPAddressIndependentEmail:
     get:
       summary: Retrieves address independent Business Partner email addresses.
@@ -821,27 +651,6 @@ paths:
             - IsDefaultEmailAddress
             - ValidityStartDate
             - ValidityEndDate
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BPAddressIndependentEmailType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPAddressIndependentEmailType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_BPAddressIndependentEmail(BusinessPartner='{BusinessPartner}',AddressID='{AddressID}',Person='{Person}',OrdinalNumber='{OrdinalNumber}')
   : get:
       summary: Retrieves address independent Business Partner email addresses.
@@ -868,19 +677,6 @@ paths:
             - IsDefaultEmailAddress
             - ValidityStartDate
             - ValidityEndDate
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BPAddressIndependentEmailType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPAddressIndependentEmailType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BPAddressIndependentFax:
     get:
       summary: Retrieves address-independent Business Partner fax numbers.
@@ -950,27 +746,6 @@ paths:
             - IsDefaultFaxNumber
             - ValidityEndDate
             - ValidityStartDate
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BPAddressIndependentFaxType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPAddressIndependentFaxType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_BPAddressIndependentFax(BusinessPartner='{BusinessPartner}',AddressID='{AddressID}',Person='{Person}',OrdinalNumber='{OrdinalNumber}')
   : get:
       summary: Retrieves address-independent Business Partner fax numbers.
@@ -1000,19 +775,6 @@ paths:
             - IsDefaultFaxNumber
             - ValidityEndDate
             - ValidityStartDate
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BPAddressIndependentFaxType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPAddressIndependentFaxType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BPAddressIndependentMobile:
     get:
       summary: Retrieves address-independent Business Partner cellphone numbers.
@@ -1085,27 +847,6 @@ paths:
             - PhoneNumberType
             - ValidityStartDate
             - ValidityEndDate
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BPAddressIndependentMobileType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPAddressIndependentMobileType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_BPAddressIndependentMobile(BusinessPartner='{BusinessPartner}',AddressID='{AddressID}',Person='{Person}',OrdinalNumber='{OrdinalNumber}')
   : get:
       summary: Retrieves address-independent Business Partner cellphone numbers.
@@ -1136,19 +877,6 @@ paths:
             - PhoneNumberType
             - ValidityStartDate
             - ValidityEndDate
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BPAddressIndependentMobileType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPAddressIndependentMobileType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BPAddressIndependentPhone:
     get:
       summary: Retrieves address-independent Business Partner phone numbers.
@@ -1221,27 +949,6 @@ paths:
             - PhoneNumberType
             - ValidityStartDate
             - ValidityEndDate
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BPAddressIndependentPhoneType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPAddressIndependentPhoneType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_BPAddressIndependentPhone(BusinessPartner='{BusinessPartner}',AddressID='{AddressID}',Person='{Person}',OrdinalNumber='{OrdinalNumber}')
   : get:
       summary: Retrieves address-independent Business Partner phone numbers.
@@ -1272,19 +979,6 @@ paths:
             - PhoneNumberType
             - ValidityStartDate
             - ValidityEndDate
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BPAddressIndependentPhoneType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPAddressIndependentPhoneType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BPAddressIndependentWebsite:
     get:
       summary: Retrieves address-independent Business Partner URL addresses.
@@ -1340,27 +1034,6 @@ paths:
             - IsDefaultURLAddress
             - URLFieldLength
             - WebsiteURL
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BPAddressIndependentWebsiteType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPAddressIndependentWebsiteType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_BPAddressIndependentWebsite(BusinessPartner='{BusinessPartner}',AddressID='{AddressID}',Person='{Person}',OrdinalNumber='{OrdinalNumber}')
   : get:
       summary: Retrieves address-independent Business Partner URL addresses.
@@ -1386,19 +1059,6 @@ paths:
             - IsDefaultURLAddress
             - URLFieldLength
             - WebsiteURL
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BPAddressIndependentWebsiteType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPAddressIndependentWebsiteType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BPContactToAddress:
     get:
       summary: Retrieves workplace address records linked to business partner contact.
@@ -1605,27 +1265,6 @@ paths:
             - to_MobilePhoneNumber
             - to_PhoneNumber
             - to_URLAddress
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BPContactToAddressType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPContactToAddressType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_BPContactToAddress(RelationshipNumber='{RelationshipNumber}',BusinessPartnerCompany='{BusinessPartnerCompany}',BusinessPartnerPerson='{BusinessPartnerPerson}',ValidityEndDate=datetime'{ValidityEndDate}',AddressID='{AddressID}')
   : get:
       summary: Retrieves contact person workplace address record by using key fields.
@@ -1714,19 +1353,6 @@ paths:
             - to_MobilePhoneNumber
             - to_PhoneNumber
             - to_URLAddress
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BPContactToAddressType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPContactToAddressType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_BPContactToAddress(RelationshipNumber='{RelationshipNumber}',BusinessPartnerCompany='{BusinessPartnerCompany}',BusinessPartnerPerson='{BusinessPartnerPerson}',ValidityEndDate=datetime'{ValidityEndDate}',AddressID='{AddressID}')/to_EmailAddress
   : get:
       summary: Retrieves email address data linked to business partner address fields.
@@ -1785,27 +1411,6 @@ paths:
             - EmailAddress
             - SearchEmailAddress
             - AddressCommunicationRemarkText
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_AddressEmailAddressType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_AddressEmailAddressType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_BPContactToAddress(RelationshipNumber='{RelationshipNumber}',BusinessPartnerCompany='{BusinessPartnerCompany}',BusinessPartnerPerson='{BusinessPartnerPerson}',ValidityEndDate=datetime'{ValidityEndDate}',AddressID='{AddressID}')/to_FaxNumber
   : get:
       summary: Retrieves fax address data linked to business partner address.
@@ -1870,27 +1475,6 @@ paths:
             - FaxNumberExtension
             - InternationalFaxNumber
             - AddressCommunicationRemarkText
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_AddressFaxNumberType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_AddressFaxNumberType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_BPContactToAddress(RelationshipNumber='{RelationshipNumber}',BusinessPartnerCompany='{BusinessPartnerCompany}',BusinessPartnerPerson='{BusinessPartnerPerson}',ValidityEndDate=datetime'{ValidityEndDate}',AddressID='{AddressID}')/to_MobilePhoneNumber
   : get:
       summary: Retrieves mobile/telephone address records linked to business partner
@@ -1959,27 +1543,6 @@ paths:
             - InternationalPhoneNumber
             - PhoneNumberType
             - AddressCommunicationRemarkText
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_AddressPhoneNumberType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_AddressPhoneNumberType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_BPContactToAddress(RelationshipNumber='{RelationshipNumber}',BusinessPartnerCompany='{BusinessPartnerCompany}',BusinessPartnerPerson='{BusinessPartnerPerson}',ValidityEndDate=datetime'{ValidityEndDate}',AddressID='{AddressID}')/to_PhoneNumber
   : get:
       summary: Retrieves mobile/telephone address records linked to business partner
@@ -2048,27 +1611,6 @@ paths:
             - InternationalPhoneNumber
             - PhoneNumberType
             - AddressCommunicationRemarkText
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_AddressPhoneNumberType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_AddressPhoneNumberType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_BPContactToAddress(RelationshipNumber='{RelationshipNumber}',BusinessPartnerCompany='{BusinessPartnerCompany}',BusinessPartnerPerson='{BusinessPartnerPerson}',ValidityEndDate=datetime'{ValidityEndDate}',AddressID='{AddressID}')/to_URLAddress
   : get:
       summary: Retrieves home page URL address records linked to business partner
@@ -2134,27 +1676,6 @@ paths:
             - AddressCommunicationRemarkText
             - URLFieldLength
             - WebsiteURL
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_AddressHomePageURLType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_AddressHomePageURLType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BPContactToFuncAndDept:
     get:
       summary: Retrieves contact person department and function data.
@@ -2242,27 +1763,6 @@ paths:
             - PhoneNumber
             - PhoneNumberExtension
             - RelationshipCategory
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BPContactToFuncAndDeptType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPContactToFuncAndDeptType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_BPContactToFuncAndDept(RelationshipNumber='{RelationshipNumber}',BusinessPartnerCompany='{BusinessPartnerCompany}',BusinessPartnerPerson='{BusinessPartnerPerson}',ValidityEndDate=datetime'{ValidityEndDate}')
   : get:
       summary: Retrieves contact person department and function data by using key
@@ -2299,19 +1799,6 @@ paths:
             - PhoneNumber
             - PhoneNumberExtension
             - RelationshipCategory
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BPContactToFuncAndDeptType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPContactToFuncAndDeptType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BPCreditWorthiness:
     get:
       summary: Retrieves business partner credit worthiness data.
@@ -2396,27 +1883,6 @@ paths:
             - BPForeclosureIsInitiated
             - BPForeclosureDate
             - BPCrdtWrthnssAccessChkIsActive
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BPCreditWorthinessType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPCreditWorthinessType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BPCreditWorthiness('{BusinessPartner}'):
     get:
       summary: Get entity from A_BPCreditWorthiness by key
@@ -2449,19 +1915,6 @@ paths:
             - BPForeclosureIsInitiated
             - BPForeclosureDate
             - BPCrdtWrthnssAccessChkIsActive
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BPCreditWorthinessType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPCreditWorthinessType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BPDataController:
     get:
       summary: Retrieves business partner data controllers by using key fields.
@@ -2522,27 +1975,6 @@ paths:
             - PurposeDerived
             - PurposeType
             - BusinessPurposeFlag
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BPDataControllerType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPDataControllerType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_BPDataController(BusinessPartner='{BusinessPartner}',DataController='{DataController}',PurposeForPersonalData='{PurposeForPersonalData}')
   : get:
       summary: Get entity from A_BPDataController by key
@@ -2567,19 +1999,6 @@ paths:
             - PurposeDerived
             - PurposeType
             - BusinessPurposeFlag
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BPDataControllerType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPDataControllerType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BPEmployment:
     get:
       summary: Retrieves business partner employments.
@@ -2637,27 +2056,6 @@ paths:
             - BusPartEmplrIndstryCode
             - BusinessPartnerEmployerName
             - BusinessPartnerOccupationGroup
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BPEmploymentType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPEmploymentType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BPEmployment(BusinessPartner='{BusinessPartner}',BPEmploymentStartDate=datetime'{BPEmploymentStartDate}'):
     get:
       summary: Retrieves business partner employments.
@@ -2683,19 +2081,6 @@ paths:
             - BusPartEmplrIndstryCode
             - BusinessPartnerEmployerName
             - BusinessPartnerOccupationGroup
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BPEmploymentType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPEmploymentType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BPFinancialServicesExtn:
     get:
       summary: Retrieves financial services business partner attributes.
@@ -2828,27 +2213,6 @@ paths:
             - BusinessPartnerEmployeeGroup
             - BusinessPartnerIsEmployee
             - BPTermnBusRelationsBankDate
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BPFinancialServicesExtnType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPFinancialServicesExtnType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BPFinancialServicesExtn('{BusinessPartner}'):
     get:
       summary: Retrieves financial services business partner attributes.
@@ -2899,19 +2263,6 @@ paths:
             - BusinessPartnerEmployeeGroup
             - BusinessPartnerIsEmployee
             - BPTermnBusRelationsBankDate
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BPFinancialServicesExtnType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPFinancialServicesExtnType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BPFinancialServicesReporting:
     get:
       summary: Retrieves business partner financial services reporting attributes.
@@ -3044,27 +2395,6 @@ paths:
             - BPHasCreditingRelief
             - BPInvestInRstrcdAstIsAuthzd
             - BPCentralBankCountryRegion
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BPFinancialServicesReportingType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPFinancialServicesReportingType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BPFinancialServicesReporting('{BusinessPartner}'):
     get:
       summary: Retrieves business partner financial services reporting attributes.
@@ -3115,19 +2445,6 @@ paths:
             - BPHasCreditingRelief
             - BPInvestInRstrcdAstIsAuthzd
             - BPCentralBankCountryRegion
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BPFinancialServicesReportingType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPFinancialServicesReportingType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BPFiscalYearInformation:
     get:
       summary: Retrieves business partner fiscal year information.
@@ -3263,27 +2580,6 @@ paths:
             - BPDebtClearancePeriodInYears
             - BPFinancingCoeffInPercent
             - BPEquityRatioInPercent
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BPFiscalYearInformationType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPFiscalYearInformationType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BPFiscalYearInformation(BusinessPartner='{BusinessPartner}',BusinessPartnerFiscalYear='{BusinessPartnerFiscalYear}'):
     get:
       summary: Retrieves business partner fiscal year information.
@@ -3335,19 +2631,6 @@ paths:
             - BPDebtClearancePeriodInYears
             - BPFinancingCoeffInPercent
             - BPEquityRatioInPercent
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BPFiscalYearInformationType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPFiscalYearInformationType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BPIntlAddressVersion:
     get:
       summary: Retrieves business partner international address versions.
@@ -3531,27 +2814,6 @@ paths:
             - TertiaryRegionName
             - TransportZone
             - VillageName
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BPIntlAddressVersionType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPIntlAddressVersionType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_BPIntlAddressVersion(BusinessPartner='{BusinessPartner}',AddressID='{AddressID}',AddressRepresentationCode='{AddressRepresentationCode}')
   : get:
       summary: Retrieves business partner international address versions by key fields.
@@ -3619,19 +2881,6 @@ paths:
             - TertiaryRegionName
             - TransportZone
             - VillageName
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BPIntlAddressVersionType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPIntlAddressVersionType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BPRelationship:
     get:
       summary: Retrieves business partner relationship data.
@@ -3710,27 +2959,6 @@ paths:
             - LastChangedByUser
             - LastChangeDate
             - LastChangeTime
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BPRelationshipType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPRelationshipType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_BPRelationship(RelationshipNumber='{RelationshipNumber}',BusinessPartner1='{BusinessPartner1}',BusinessPartner2='{BusinessPartner2}',ValidityEndDate=datetime'{ValidityEndDate}')
   : get:
       summary: Retrieves business partner relationship data by using key fields.
@@ -3763,19 +2991,6 @@ paths:
             - LastChangedByUser
             - LastChangeDate
             - LastChangeTime
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BPRelationshipType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPRelationshipType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BuPaAddressUsage:
     get:
       summary: Retrieves address usage linked to business partner address.
@@ -3833,27 +3048,6 @@ paths:
             - ValidityStartDate
             - StandardUsage
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BuPaAddressUsageType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BuPaAddressUsageType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_BuPaAddressUsage(BusinessPartner='{BusinessPartner}',ValidityEndDate=datetimeoffset'{ValidityEndDate}',AddressUsage='{AddressUsage}',AddressID='{AddressID}')
   : get:
       summary: Retrieves address usage record by key fields.
@@ -3879,19 +3073,6 @@ paths:
             - ValidityStartDate
             - StandardUsage
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BuPaAddressUsageType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BuPaAddressUsageType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BuPaIdentification:
     get:
       summary: Retrieves business partner identification data.
@@ -3958,27 +3139,6 @@ paths:
             - ValidityStartDate
             - ValidityEndDate
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BuPaIdentificationType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BuPaIdentificationType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_BuPaIdentification(BusinessPartner='{BusinessPartner}',BPIdentificationType='{BPIdentificationType}',BPIdentificationNumber='{BPIdentificationNumber}')
   : get:
       summary: Retrieves business partner identification data by using key fields.
@@ -4007,19 +3167,6 @@ paths:
             - ValidityStartDate
             - ValidityEndDate
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BuPaIdentificationType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BuPaIdentificationType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BuPaIndustry:
     get:
       summary: Retrieves business partner industry data.
@@ -4071,27 +3218,6 @@ paths:
             - BusinessPartner
             - IsStandardIndustry
             - IndustryKeyDescription
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BuPaIndustryType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BuPaIndustryType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_BuPaIndustry(IndustrySector='{IndustrySector}',IndustrySystemType='{IndustrySystemType}',BusinessPartner='{BusinessPartner}')
   : get:
       summary: Retrieves business partner industry data by key fields.
@@ -4115,19 +3241,6 @@ paths:
             - BusinessPartner
             - IsStandardIndustry
             - IndustryKeyDescription
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BuPaIndustryType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BuPaIndustryType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartner:
     get:
       summary: Retrieves business partner general data.
@@ -4433,27 +3546,6 @@ paths:
             - to_Customer
             - to_PaymentCard
             - to_Supplier
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BusinessPartnerType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartner('{BusinessPartner}'):
     get:
       summary: Retrieves business partner data by using business partner number.
@@ -4603,19 +3695,6 @@ paths:
             - to_Customer
             - to_PaymentCard
             - to_Supplier
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BusinessPartnerType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartner('{BusinessPartner}')/to_AddressIndependentEmail:
     get:
       summary: Retrieves address independent Business Partner email addresses.
@@ -4677,27 +3756,6 @@ paths:
             - IsDefaultEmailAddress
             - ValidityStartDate
             - ValidityEndDate
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BPAddressIndependentEmailType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPAddressIndependentEmailType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartner('{BusinessPartner}')/to_AddressIndependentFax:
     get:
       summary: Retrieves address-independent Business Partner fax numbers.
@@ -4768,27 +3826,6 @@ paths:
             - IsDefaultFaxNumber
             - ValidityEndDate
             - ValidityStartDate
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BPAddressIndependentFaxType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPAddressIndependentFaxType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartner('{BusinessPartner}')/to_AddressIndependentMobile:
     get:
       summary: Retrieves address-independent Business Partner cellphone numbers.
@@ -4862,27 +3899,6 @@ paths:
             - PhoneNumberType
             - ValidityStartDate
             - ValidityEndDate
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BPAddressIndependentMobileType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPAddressIndependentMobileType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartner('{BusinessPartner}')/to_AddressIndependentPhone:
     get:
       summary: Retrieves address-independent Business Partner phone numbers.
@@ -4956,27 +3972,6 @@ paths:
             - PhoneNumberType
             - ValidityStartDate
             - ValidityEndDate
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BPAddressIndependentPhoneType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPAddressIndependentPhoneType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartner('{BusinessPartner}')/to_AddressIndependentWebsite:
     get:
       summary: Retrieves address-independent Business Partner URL addresses.
@@ -5033,27 +4028,6 @@ paths:
             - IsDefaultURLAddress
             - URLFieldLength
             - WebsiteURL
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BPAddressIndependentWebsiteType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPAddressIndependentWebsiteType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartner('{BusinessPartner}')/to_BPCreditWorthiness:
     get:
       summary: Retrieves business partner credit worthiness data.
@@ -5089,19 +4063,6 @@ paths:
             - BPForeclosureIsInitiated
             - BPForeclosureDate
             - BPCrdtWrthnssAccessChkIsActive
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BPCreditWorthinessType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPCreditWorthinessType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartner('{BusinessPartner}')/to_BPDataController:
     get:
       summary: Retrieves business partner data controllers by using key fields.
@@ -5163,27 +4124,6 @@ paths:
             - PurposeDerived
             - PurposeType
             - BusinessPurposeFlag
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BPDataControllerType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPDataControllerType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartner('{BusinessPartner}')/to_BPEmployment:
     get:
       summary: Retrieves business partner employments.
@@ -5242,27 +4182,6 @@ paths:
             - BusPartEmplrIndstryCode
             - BusinessPartnerEmployerName
             - BusinessPartnerOccupationGroup
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BPEmploymentType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPEmploymentType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartner('{BusinessPartner}')/to_BPFinServicesReporting:
     get:
       summary: Get related to_BPFinServicesReporting
@@ -5312,19 +4231,6 @@ paths:
             - BPHasCreditingRelief
             - BPInvestInRstrcdAstIsAuthzd
             - BPCentralBankCountryRegion
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BPFinancialServicesReportingType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPFinancialServicesReportingType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartner('{BusinessPartner}')/to_BPFiscalYearInformation:
     get:
       summary: Retrieves business partner fiscal year information.
@@ -5461,27 +4367,6 @@ paths:
             - BPDebtClearancePeriodInYears
             - BPFinancingCoeffInPercent
             - BPEquityRatioInPercent
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BPFiscalYearInformationType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPFiscalYearInformationType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartner('{BusinessPartner}')/to_BPRelationship:
     get:
       summary: Retrieves business partner relationship data.
@@ -5561,27 +4446,6 @@ paths:
             - LastChangedByUser
             - LastChangeDate
             - LastChangeTime
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BPRelationshipType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPRelationshipType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartner('{BusinessPartner}')/to_BuPaIdentification:
     get:
       summary: Retrieves business partner identification data.
@@ -5649,27 +4513,6 @@ paths:
             - ValidityStartDate
             - ValidityEndDate
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BuPaIdentificationType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BuPaIdentificationType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartner('{BusinessPartner}')/to_BuPaIndustry:
     get:
       summary: Retrieves business partner industry data.
@@ -5722,27 +4565,6 @@ paths:
             - BusinessPartner
             - IsStandardIndustry
             - IndustryKeyDescription
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BuPaIndustryType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BuPaIndustryType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartner('{BusinessPartner}')/to_BusinessPartner:
     get:
       summary: Retrieves financial services business partner attributes.
@@ -5794,19 +4616,6 @@ paths:
             - BusinessPartnerEmployeeGroup
             - BusinessPartnerIsEmployee
             - BPTermnBusRelationsBankDate
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BPFinancialServicesExtnType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPFinancialServicesExtnType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartner('{BusinessPartner}')/to_BusinessPartnerAddress:
     get:
       summary: Retrieves business partner address data.
@@ -6002,27 +4811,6 @@ paths:
             - to_MobilePhoneNumber
             - to_PhoneNumber
             - to_URLAddress
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BusinessPartnerAddressType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerAddressType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartner('{BusinessPartner}')/to_BusinessPartnerAlias:
     get:
       summary: Retrieves business partner aliases.
@@ -6069,27 +4857,6 @@ paths:
             - BusinessPartner
             - BPAliasPositionNumber
             - BusinessPartnerAliasName
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BusinessPartnerAliasType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerAliasType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartner('{BusinessPartner}')/to_BusinessPartnerBank:
     get:
       summary: Retrieves business partner bank data.
@@ -6181,27 +4948,6 @@ paths:
             - CollectionAuthInd
             - CityName
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BusinessPartnerBankType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerBankType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartner('{BusinessPartner}')/to_BusinessPartnerContact:
     get:
       summary: Retrieves business partner contact data.
@@ -6274,27 +5020,6 @@ paths:
             enum:
             - to_ContactAddress
             - to_ContactRelationship
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BusinessPartnerContactType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerContactType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartner('{BusinessPartner}')/to_BusinessPartnerIsBank:
     get:
       summary: Provides the bank key if the business partner is a bank.
@@ -6317,19 +5042,6 @@ paths:
             - BankKey
             - BankCountry
             - BPMinimumReserve
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BusinessPartnerIsBankType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerIsBankType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartner('{BusinessPartner}')/to_BusinessPartnerRating:
     get:
       summary: Retrieves business partner ratings.
@@ -6406,27 +5118,6 @@ paths:
             - BusinessPartnerRatingKeyDate
             - BusinessPartnerRatingIsExpired
             - BPRatingLongComment
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BusinessPartnerRatingType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerRatingType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartner('{BusinessPartner}')/to_BusinessPartnerRole:
     get:
       summary: Retrieves business partner role data.
@@ -6479,27 +5170,6 @@ paths:
             - ValidFrom
             - ValidTo
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BusinessPartnerRoleType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerRoleType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartner('{BusinessPartner}')/to_BusinessPartnerTax:
     get:
       summary: Retrieves business partner tax number data.
@@ -6552,27 +5222,6 @@ paths:
             - BPTaxNumber
             - BPTaxLongNumber
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BusinessPartnerTaxNumberType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerTaxNumberType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartner('{BusinessPartner}')/to_BusPartAddrDepdntTaxNmbr:
     get:
       summary: Retrieves address dependent business partner tax number data.
@@ -6628,27 +5277,6 @@ paths:
             - BPTaxNumber
             - BPTaxLongNumber
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BusPartAddrDepdntTaxNmbrType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusPartAddrDepdntTaxNmbrType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartner('{BusinessPartner}')/to_Customer:
     get:
       summary: Retrieves customer general data.
@@ -6746,19 +5374,6 @@ paths:
             - to_CustomerText
             - to_CustomerUnloadingPoint
             - to_CustUnldgPtAddrDepdntInfo
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_CustomerType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartner('{BusinessPartner}')/to_PaymentCard:
     get:
       summary: Retrieves business partner payment card data.
@@ -6835,27 +5450,6 @@ paths:
             - CardIssueDate
             - PaymentCardLock
             - MaskedCardNumber
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BusinessPartnerPaymentCardType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerPaymentCardType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartner('{BusinessPartner}')/to_Supplier:
     get:
       summary: Retrieves supplier general data.
@@ -6930,19 +5524,6 @@ paths:
             - to_SupplierCompany
             - to_SupplierPurchasingOrg
             - to_SupplierText
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_SupplierType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartnerAddress:
     get:
       summary: Retrieves business partner address data.
@@ -7137,27 +5718,6 @@ paths:
             - to_MobilePhoneNumber
             - to_PhoneNumber
             - to_URLAddress
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BusinessPartnerAddressType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerAddressType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartnerAddress(BusinessPartner='{BusinessPartner}',AddressID='{AddressID}'):
     get:
       summary: Retrieves business partner address data by using the key field.
@@ -7246,19 +5806,6 @@ paths:
             - to_MobilePhoneNumber
             - to_PhoneNumber
             - to_URLAddress
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BusinessPartnerAddressType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerAddressType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartnerAddress(BusinessPartner='{BusinessPartner}',AddressID='{AddressID}')/to_AddressUsage:
     get:
       summary: Retrieves address usage linked to business partner address.
@@ -7317,27 +5864,6 @@ paths:
             - ValidityStartDate
             - StandardUsage
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BuPaAddressUsageType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BuPaAddressUsageType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartnerAddress(BusinessPartner='{BusinessPartner}',AddressID='{AddressID}')/to_BPAddrDepdntIntlLocNumber:
     get:
       summary: Retrieves address dependent data for the business partner address.
@@ -7362,19 +5888,6 @@ paths:
             - InternationalLocationNumber1
             - InternationalLocationNumber2
             - InternationalLocationNumber3
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BPAddrDepdntIntlLocNumberType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPAddrDepdntIntlLocNumberType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartnerAddress(BusinessPartner='{BusinessPartner}',AddressID='{AddressID}')/to_BPIntlAddressVersion:
     get:
       summary: Get entities from related to_BPIntlAddressVersion
@@ -7557,27 +6070,6 @@ paths:
             - TertiaryRegionName
             - TransportZone
             - VillageName
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BPIntlAddressVersionType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPIntlAddressVersionType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartnerAddress(BusinessPartner='{BusinessPartner}',AddressID='{AddressID}')/to_EmailAddress:
     get:
       summary: Retrieves email address data linked to business partner address fields.
@@ -7636,27 +6128,6 @@ paths:
             - EmailAddress
             - SearchEmailAddress
             - AddressCommunicationRemarkText
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_AddressEmailAddressType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_AddressEmailAddressType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartnerAddress(BusinessPartner='{BusinessPartner}',AddressID='{AddressID}')/to_FaxNumber:
     get:
       summary: Retrieves fax address data linked to business partner address.
@@ -7721,27 +6192,6 @@ paths:
             - FaxNumberExtension
             - InternationalFaxNumber
             - AddressCommunicationRemarkText
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_AddressFaxNumberType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_AddressFaxNumberType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartnerAddress(BusinessPartner='{BusinessPartner}',AddressID='{AddressID}')/to_MobilePhoneNumber:
     get:
       summary: Retrieves mobile/telephone address records linked to business partner
@@ -7810,27 +6260,6 @@ paths:
             - InternationalPhoneNumber
             - PhoneNumberType
             - AddressCommunicationRemarkText
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_AddressPhoneNumberType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_AddressPhoneNumberType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartnerAddress(BusinessPartner='{BusinessPartner}',AddressID='{AddressID}')/to_PhoneNumber:
     get:
       summary: Retrieves mobile/telephone address records linked to business partner
@@ -7899,27 +6328,6 @@ paths:
             - InternationalPhoneNumber
             - PhoneNumberType
             - AddressCommunicationRemarkText
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_AddressPhoneNumberType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_AddressPhoneNumberType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartnerAddress(BusinessPartner='{BusinessPartner}',AddressID='{AddressID}')/to_URLAddress:
     get:
       summary: Retrieves home page URL address records linked to business partner
@@ -7985,27 +6393,6 @@ paths:
             - AddressCommunicationRemarkText
             - URLFieldLength
             - WebsiteURL
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_AddressHomePageURLType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_AddressHomePageURLType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartnerAlias:
     get:
       summary: Retrieves business partner aliases.
@@ -8051,27 +6438,6 @@ paths:
             - BusinessPartner
             - BPAliasPositionNumber
             - BusinessPartnerAliasName
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BusinessPartnerAliasType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerAliasType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartnerAlias(BusinessPartner='{BusinessPartner}',BPAliasPositionNumber='{BPAliasPositionNumber}'):
     get:
       summary: Retrieves business partner aliases.
@@ -8093,19 +6459,6 @@ paths:
             - BusinessPartner
             - BPAliasPositionNumber
             - BusinessPartnerAliasName
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BusinessPartnerAliasType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerAliasType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartnerBank:
     get:
       summary: Retrieves business partner bank data.
@@ -8196,27 +6549,6 @@ paths:
             - CollectionAuthInd
             - CityName
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BusinessPartnerBankType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerBankType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartnerBank(BusinessPartner='{BusinessPartner}',BankIdentification='{BankIdentification}'):
     get:
       summary: Retrieves business partner bank data by using key fields.
@@ -8253,19 +6585,6 @@ paths:
             - CollectionAuthInd
             - CityName
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BusinessPartnerBankType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerBankType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartnerContact:
     get:
       summary: Retrieves business partner contact data.
@@ -8337,27 +6656,6 @@ paths:
             enum:
             - to_ContactAddress
             - to_ContactRelationship
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BusinessPartnerContactType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerContactType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_BusinessPartnerContact(RelationshipNumber='{RelationshipNumber}',BusinessPartnerCompany='{BusinessPartnerCompany}',BusinessPartnerPerson='{BusinessPartnerPerson}',ValidityEndDate=datetime'{ValidityEndDate}')
   : get:
       summary: Retrieves business partner contact data by using key fields.
@@ -8397,19 +6695,6 @@ paths:
             enum:
             - to_ContactAddress
             - to_ContactRelationship
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BusinessPartnerContactType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerContactType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_BusinessPartnerContact(RelationshipNumber='{RelationshipNumber}',BusinessPartnerCompany='{BusinessPartnerCompany}',BusinessPartnerPerson='{BusinessPartnerPerson}',ValidityEndDate=datetime'{ValidityEndDate}')/to_ContactAddress
   : get:
       summary: Retrieves workplace address records linked to business partner contact.
@@ -8617,27 +6902,6 @@ paths:
             - to_MobilePhoneNumber
             - to_PhoneNumber
             - to_URLAddress
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BPContactToAddressType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPContactToAddressType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_BusinessPartnerContact(RelationshipNumber='{RelationshipNumber}',BusinessPartnerCompany='{BusinessPartnerCompany}',BusinessPartnerPerson='{BusinessPartnerPerson}',ValidityEndDate=datetime'{ValidityEndDate}')/to_ContactRelationship
   : get:
       summary: Retrieves contact person department and function data.
@@ -8674,19 +6938,6 @@ paths:
             - PhoneNumber
             - PhoneNumberExtension
             - RelationshipCategory
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BPContactToFuncAndDeptType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BPContactToFuncAndDeptType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartnerIsBank:
     get:
       summary: Provides the bank key if the business partner is a bank.
@@ -8734,27 +6985,6 @@ paths:
             - BankKey
             - BankCountry
             - BPMinimumReserve
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BusinessPartnerIsBankType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerIsBankType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartnerIsBank('{BusinessPartner}'):
     get:
       summary: Provides the bank key if the business partner is a bank.
@@ -8776,19 +7006,6 @@ paths:
             - BankKey
             - BankCountry
             - BPMinimumReserve
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BusinessPartnerIsBankType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerIsBankType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartnerPaymentCard:
     get:
       summary: Retrieves business partner payment card data.
@@ -8864,27 +7081,6 @@ paths:
             - CardIssueDate
             - PaymentCardLock
             - MaskedCardNumber
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BusinessPartnerPaymentCardType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerPaymentCardType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_BusinessPartnerPaymentCard(BusinessPartner='{BusinessPartner}',PaymentCardID='{PaymentCardID}',PaymentCardType='{PaymentCardType}',CardNumber='{CardNumber}')
   : get:
       summary: Retrieves business partner payment card data by key fields.
@@ -8916,19 +7112,6 @@ paths:
             - CardIssueDate
             - PaymentCardLock
             - MaskedCardNumber
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BusinessPartnerPaymentCardType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerPaymentCardType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartnerRating:
     get:
       summary: Retrieves business partner ratings.
@@ -9004,27 +7187,6 @@ paths:
             - BusinessPartnerRatingKeyDate
             - BusinessPartnerRatingIsExpired
             - BPRatingLongComment
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BusinessPartnerRatingType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerRatingType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_BusinessPartnerRating(BusinessPartner='{BusinessPartner}',BusinessPartnerRatingProcedure='{BusinessPartnerRatingProcedure}',BPRatingValidityEndDate=datetime'{BPRatingValidityEndDate}')
   : get:
       summary: Retrieves business partner ratings.
@@ -9056,19 +7218,6 @@ paths:
             - BusinessPartnerRatingKeyDate
             - BusinessPartnerRatingIsExpired
             - BPRatingLongComment
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BusinessPartnerRatingType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerRatingType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartnerRole:
     get:
       summary: Retrieves business partner role data.
@@ -9120,27 +7269,6 @@ paths:
             - ValidFrom
             - ValidTo
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BusinessPartnerRoleType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerRoleType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartnerRole(BusinessPartner='{BusinessPartner}',BusinessPartnerRole='{BusinessPartnerRole}'):
     get:
       summary: Retrieves business partner role data using the key fields.
@@ -9164,19 +7292,6 @@ paths:
             - ValidFrom
             - ValidTo
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BusinessPartnerRoleType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerRoleType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartnerTaxNumber:
     get:
       summary: Retrieves business partner tax number data.
@@ -9228,27 +7343,6 @@ paths:
             - BPTaxNumber
             - BPTaxLongNumber
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BusinessPartnerTaxNumberType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerTaxNumberType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusinessPartnerTaxNumber(BusinessPartner='{BusinessPartner}',BPTaxType='{BPTaxType}'):
     get:
       summary: Retrieves business partner tax number data by using key fields.
@@ -9272,19 +7366,6 @@ paths:
             - BPTaxNumber
             - BPTaxLongNumber
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BusinessPartnerTaxNumberType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusinessPartnerTaxNumberType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusPartAddrDepdntTaxNmbr:
     get:
       summary: Retrieves address dependent business partner tax number data.
@@ -9339,27 +7420,6 @@ paths:
             - BPTaxNumber
             - BPTaxLongNumber
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_BusPartAddrDepdntTaxNmbrType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusPartAddrDepdntTaxNmbrType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_BusPartAddrDepdntTaxNmbr(BusinessPartner='{BusinessPartner}',AddressID='{AddressID}',BPTaxType='{BPTaxType}'):
     get:
       summary: Retrieves address dependent business partner tax number data by using
@@ -9385,19 +7445,6 @@ paths:
             - BPTaxNumber
             - BPTaxLongNumber
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_BusPartAddrDepdntTaxNmbrType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_BusPartAddrDepdntTaxNmbrType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustAddrDepdntExtIdentifier:
     get:
       summary: Retrieves the address dependent external identifier of customers.
@@ -9443,27 +7490,6 @@ paths:
             - Customer
             - AddressID
             - CustomerExternalRefID
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustAddrDepdntExtIdentifierType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustAddrDepdntExtIdentifierType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustAddrDepdntExtIdentifier(Customer='{Customer}',AddressID='{AddressID}'):
     get:
       summary: Retrieves the address dependent external identifier of customers.
@@ -9485,19 +7511,6 @@ paths:
             - Customer
             - AddressID
             - CustomerExternalRefID
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_CustAddrDepdntExtIdentifierType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustAddrDepdntExtIdentifierType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustAddrDepdntInformation:
     get:
       summary: Retrieves address dependent customer data.
@@ -9552,27 +7565,6 @@ paths:
             - TrainStationName
             - CityCode
             - County
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustAddrDepdntInformationType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustAddrDepdntInformationType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustAddrDepdntInformation(Customer='{Customer}',AddressID='{AddressID}'):
     get:
       summary: Retrieves address dependent customer data by using key fields.
@@ -9597,19 +7589,6 @@ paths:
             - TrainStationName
             - CityCode
             - County
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_CustAddrDepdntInformationType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustAddrDepdntInformationType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_Customer:
     get:
       summary: Retrieves customer general data.
@@ -9828,27 +7807,6 @@ paths:
             - to_CustomerText
             - to_CustomerUnloadingPoint
             - to_CustUnldgPtAddrDepdntInfo
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustomerType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_Customer('{Customer}'):
     get:
       summary: Retrieves customer data by using customer number.
@@ -9945,19 +7903,6 @@ paths:
             - to_CustomerText
             - to_CustomerUnloadingPoint
             - to_CustUnldgPtAddrDepdntInfo
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_CustomerType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_Customer('{Customer}')/to_CustAddrDepdntExtIdentifier:
     get:
       summary: Get entities from related to_CustAddrDepdntExtIdentifier
@@ -10002,27 +7947,6 @@ paths:
             - Customer
             - AddressID
             - CustomerExternalRefID
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustAddrDepdntExtIdentifierType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustAddrDepdntExtIdentifierType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_Customer('{Customer}')/to_CustAddrDepdntInformation:
     get:
       summary: Retrieves address dependent customer data.
@@ -10078,27 +8002,6 @@ paths:
             - TrainStationName
             - CityCode
             - County
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustAddrDepdntInformationType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustAddrDepdntInformationType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_Customer('{Customer}')/to_CustomerCompany:
     get:
       summary: Retrieves customer company data.
@@ -10257,27 +8160,6 @@ paths:
             - to_CompanyText
             - to_CustomerDunning
             - to_WithHoldingTax
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustomerCompanyType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerCompanyType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_Customer('{Customer}')/to_CustomerSalesArea:
     get:
       summary: Retrieves customer sales area data.
@@ -10513,27 +8395,6 @@ paths:
             - to_SalesAreaTax
             - to_SalesAreaText
             - to_SlsAreaAddrDepdntInfo
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustomerSalesAreaType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerSalesAreaType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_Customer('{Customer}')/to_CustomerTaxGrouping:
     get:
       summary: Retrieves customer tax grouping data.
@@ -10595,27 +8456,6 @@ paths:
             - CustTaxGroupExemptionEndDate
             - CustTaxGroupSubjectedStartDate
             - CustTaxGroupSubjectedEndDate
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustomerTaxGroupingType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerTaxGroupingType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_Customer('{Customer}')/to_CustomerText:
     get:
       summary: Retrieves customer text data.
@@ -10663,27 +8503,6 @@ paths:
             - Language
             - LongTextID
             - LongText
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustomerTextType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerTextType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_Customer('{Customer}')/to_CustomerUnloadingPoint:
     get:
       summary: Retrieves customer unloading point data.
@@ -10820,27 +8639,6 @@ paths:
             - SundayMorningClosingTime
             - SundayAfternoonOpeningTime
             - SundayAfternoonClosingTime
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustomerUnloadingPointType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerUnloadingPointType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_Customer('{Customer}')/to_CustUnldgPtAddrDepdntInfo:
     get:
       summary: Retrieves address dependent customer unloading point data.
@@ -10980,27 +8778,6 @@ paths:
             - SundayMorningClosingTime
             - SundayAfternoonOpeningTime
             - SundayAfternoonClosingTime
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustUnldgPtAddrDepdntInfoType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustUnldgPtAddrDepdntInfoType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustomerCompany:
     get:
       summary: Retrieves customer company data.
@@ -11158,27 +8935,6 @@ paths:
             - to_CompanyText
             - to_CustomerDunning
             - to_WithHoldingTax
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustomerCompanyType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerCompanyType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustomerCompany(Customer='{Customer}',CompanyCode='{CompanyCode}'):
     get:
       summary: Retrieves customer company data by using key fields.
@@ -11248,19 +9004,6 @@ paths:
             - to_CompanyText
             - to_CustomerDunning
             - to_WithHoldingTax
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_CustomerCompanyType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerCompanyType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustomerCompany(Customer='{Customer}',CompanyCode='{CompanyCode}')/to_CompanyText:
     get:
       summary: Retrieves customer company text records attached to company data.
@@ -11311,27 +9054,6 @@ paths:
             - Language
             - LongTextID
             - LongText
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustomerCompanyTextType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerCompanyTextType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustomerCompany(Customer='{Customer}',CompanyCode='{CompanyCode}')/to_CustomerDunning:
     get:
       summary: Retrieves dunning records attached to customer company.
@@ -11405,27 +9127,6 @@ paths:
             - DunningClerk
             - AuthorizationGroup
             - CustomerAccountGroup
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustomerDunningType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerDunningType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustomerCompany(Customer='{Customer}',CompanyCode='{CompanyCode}')/to_WithHoldingTax:
     get:
       summary: Retrieves customer withholding tax records attached to customer company.
@@ -11505,27 +9206,6 @@ paths:
             - ExemptionDateEnd
             - ExemptionReason
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustomerWithHoldingTaxType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerWithHoldingTaxType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustomerCompanyText:
     get:
       summary: Retrieves customer company text records attached to company data.
@@ -11575,27 +9255,6 @@ paths:
             - Language
             - LongTextID
             - LongText
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustomerCompanyTextType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerCompanyTextType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustomerCompanyText(Customer='{Customer}',CompanyCode='{CompanyCode}',Language='{Language}',LongTextID='{LongTextID}'):
     get:
       summary: Retrieves customer company text data by using key fields.
@@ -11619,19 +9278,6 @@ paths:
             - Language
             - LongTextID
             - LongText
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_CustomerCompanyTextType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerCompanyTextType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustomerDunning:
     get:
       summary: Retrieves dunning records attached to customer company.
@@ -11704,27 +9350,6 @@ paths:
             - DunningClerk
             - AuthorizationGroup
             - CustomerAccountGroup
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustomerDunningType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerDunningType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustomerDunning(Customer='{Customer}',CompanyCode='{CompanyCode}',DunningArea='{DunningArea}'):
     get:
       summary: Retrieves all the dunning records by using key fields.
@@ -11755,19 +9380,6 @@ paths:
             - DunningClerk
             - AuthorizationGroup
             - CustomerAccountGroup
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_CustomerDunningType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerDunningType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustomerSalesArea:
     get:
       summary: Retrieves customer sales area data.
@@ -12002,27 +9614,6 @@ paths:
             - to_SalesAreaTax
             - to_SalesAreaText
             - to_SlsAreaAddrDepdntInfo
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustomerSalesAreaType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerSalesAreaType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_CustomerSalesArea(Customer='{Customer}',SalesOrganization='{SalesOrganization}',DistributionChannel='{DistributionChannel}',Division='{Division}')
   : get:
       summary: Retrieves customer sales area data by key fields.
@@ -12119,19 +9710,6 @@ paths:
             - to_SalesAreaTax
             - to_SalesAreaText
             - to_SlsAreaAddrDepdntInfo
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_CustomerSalesAreaType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerSalesAreaType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_CustomerSalesArea(Customer='{Customer}',SalesOrganization='{SalesOrganization}',DistributionChannel='{DistributionChannel}',Division='{Division}')/to_PartnerFunction
   : get:
       summary: Retrieves customer sales area partner function records.
@@ -12211,27 +9789,6 @@ paths:
             - ContactPerson
             - AddressID
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustSalesPartnerFuncType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustSalesPartnerFuncType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_CustomerSalesArea(Customer='{Customer}',SalesOrganization='{SalesOrganization}',DistributionChannel='{DistributionChannel}',Division='{Division}')/to_SalesAreaTax
   : get:
       summary: Retrieves customer sales area data.
@@ -12302,27 +9859,6 @@ paths:
             type: string
             enum:
             - to_SlsAreaAddrDepdntTax
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustomerSalesAreaTaxType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerSalesAreaTaxType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_CustomerSalesArea(Customer='{Customer}',SalesOrganization='{SalesOrganization}',DistributionChannel='{DistributionChannel}',Division='{Division}')/to_SalesAreaText
   : get:
       summary: Retrieves customer sales area text data.
@@ -12379,27 +9915,6 @@ paths:
             - Language
             - LongTextID
             - LongText
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustomerSalesAreaTextType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerSalesAreaTextType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_CustomerSalesArea(Customer='{Customer}',SalesOrganization='{SalesOrganization}',DistributionChannel='{DistributionChannel}',Division='{Division}')/to_SlsAreaAddrDepdntInfo
   : get:
       summary: Retrieves address dependent customer sales area data.
@@ -12488,27 +10003,6 @@ paths:
             - ShippingCondition
             - SupplyingPlant
             - IncotermsVersion
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustSlsAreaAddrDepdntInfoType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustSlsAreaAddrDepdntInfoType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustomerSalesAreaTax:
     get:
       summary: Retrieves customer sales area tax data.
@@ -12578,27 +10072,6 @@ paths:
             type: string
             enum:
             - to_SlsAreaAddrDepdntTax
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustomerSalesAreaTaxType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerSalesAreaTaxType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_CustomerSalesAreaTax(Customer='{Customer}',SalesOrganization='{SalesOrganization}',DistributionChannel='{DistributionChannel}',Division='{Division}',DepartureCountry='{DepartureCountry}',CustomerTaxCategory='{CustomerTaxCategory}')
   : get:
       summary: Retrieves customer sales area tax data using key fields.
@@ -12636,19 +10109,6 @@ paths:
             type: string
             enum:
             - to_SlsAreaAddrDepdntTax
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_CustomerSalesAreaTaxType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerSalesAreaTaxType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_CustomerSalesAreaTax(Customer='{Customer}',SalesOrganization='{SalesOrganization}',DistributionChannel='{DistributionChannel}',Division='{Division}',DepartureCountry='{DepartureCountry}',CustomerTaxCategory='{CustomerTaxCategory}')/to_SlsAreaAddrDepdntTax
   : get:
       summary: Retrieves address dependent customer sales area tax data.
@@ -12710,27 +10170,6 @@ paths:
             - DepartureCountry
             - CustomerTaxCategory
             - CustomerTaxClassification
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustSlsAreaAddrDepdntTaxInfoType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustSlsAreaAddrDepdntTaxInfoType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustomerSalesAreaText:
     get:
       summary: Retrieves customer sales area text data.
@@ -12786,27 +10225,6 @@ paths:
             - Language
             - LongTextID
             - LongText
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustomerSalesAreaTextType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerSalesAreaTextType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_CustomerSalesAreaText(Customer='{Customer}',SalesOrganization='{SalesOrganization}',DistributionChannel='{DistributionChannel}',Division='{Division}',Language='{Language}',LongTextID='{LongTextID}')
   : get:
       summary: Retrieves customer sales area text data by key fields.
@@ -12832,19 +10250,6 @@ paths:
             - Language
             - LongTextID
             - LongText
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_CustomerSalesAreaTextType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerSalesAreaTextType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustomerTaxGrouping:
     get:
       summary: Retrieves customer tax grouping data.
@@ -12905,27 +10310,6 @@ paths:
             - CustTaxGroupExemptionEndDate
             - CustTaxGroupSubjectedStartDate
             - CustTaxGroupSubjectedEndDate
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustomerTaxGroupingType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerTaxGroupingType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustomerTaxGrouping(Customer='{Customer}',CustomerTaxGroupingCode='{CustomerTaxGroupingCode}'):
     get:
       summary: Retrieves customer tax grouping records using the key fields.
@@ -12951,19 +10335,6 @@ paths:
             - CustTaxGroupExemptionEndDate
             - CustTaxGroupSubjectedStartDate
             - CustTaxGroupSubjectedEndDate
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_CustomerTaxGroupingType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerTaxGroupingType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustomerText:
     get:
       summary: Retrieves customer text data.
@@ -13010,27 +10381,6 @@ paths:
             - Language
             - LongTextID
             - LongText
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustomerTextType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerTextType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustomerText(Customer='{Customer}',Language='{Language}',LongTextID='{LongTextID}'):
     get:
       summary: Retrieves customer text records using the key fields.
@@ -13053,19 +10403,6 @@ paths:
             - Language
             - LongTextID
             - LongText
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_CustomerTextType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerTextType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustomerUnloadingPoint:
     get:
       summary: Retrieves customer unloading point data.
@@ -13201,27 +10538,6 @@ paths:
             - SundayMorningClosingTime
             - SundayAfternoonOpeningTime
             - SundayAfternoonClosingTime
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustomerUnloadingPointType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerUnloadingPointType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustomerUnloadingPoint(Customer='{Customer}',UnloadingPointName='{UnloadingPointName}'):
     get:
       summary: Retrieves customer unloading point records by using key fields.
@@ -13273,19 +10589,6 @@ paths:
             - SundayMorningClosingTime
             - SundayAfternoonOpeningTime
             - SundayAfternoonClosingTime
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_CustomerUnloadingPointType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerUnloadingPointType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustomerWithHoldingTax:
     get:
       summary: Retrieves customer withholding tax records attached to customer company.
@@ -13364,27 +10667,6 @@ paths:
             - ExemptionDateEnd
             - ExemptionReason
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustomerWithHoldingTaxType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerWithHoldingTaxType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustomerWithHoldingTax(Customer='{Customer}',CompanyCode='{CompanyCode}',WithholdingTaxType='{WithholdingTaxType}'):
     get:
       summary: Retrieves customer withholding tax records by using key fields.
@@ -13417,19 +10699,6 @@ paths:
             - ExemptionDateEnd
             - ExemptionReason
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_CustomerWithHoldingTaxType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustomerWithHoldingTaxType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustSalesPartnerFunc:
     get:
       summary: Retrieves customer sales area partner function records.
@@ -13508,27 +10777,6 @@ paths:
             - ContactPerson
             - AddressID
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustSalesPartnerFuncType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustSalesPartnerFuncType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_CustSalesPartnerFunc(Customer='{Customer}',SalesOrganization='{SalesOrganization}',DistributionChannel='{DistributionChannel}',Division='{Division}',PartnerCounter='{PartnerCounter}',PartnerFunction='{PartnerFunction}')
   : get:
       summary: Retrieves sales area partner function data by using key fields.
@@ -13561,19 +10809,6 @@ paths:
             - ContactPerson
             - AddressID
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_CustSalesPartnerFuncType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustSalesPartnerFuncType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustSlsAreaAddrDepdntInfo:
     get:
       summary: Retrieves address dependent customer sales area data.
@@ -13661,27 +10896,6 @@ paths:
             - ShippingCondition
             - SupplyingPlant
             - IncotermsVersion
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustSlsAreaAddrDepdntInfoType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustSlsAreaAddrDepdntInfoType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_CustSlsAreaAddrDepdntInfo(Customer='{Customer}',SalesOrganization='{SalesOrganization}',DistributionChannel='{DistributionChannel}',Division='{Division}',AddressID='{AddressID}')
   : get:
       summary: Retrieves address dependent customer sales area data by using key fields.
@@ -13717,19 +10931,6 @@ paths:
             - ShippingCondition
             - SupplyingPlant
             - IncotermsVersion
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_CustSlsAreaAddrDepdntInfoType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustSlsAreaAddrDepdntInfoType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustSlsAreaAddrDepdntTaxInfo:
     get:
       summary: Retrieves address dependent customer sales area tax data.
@@ -13790,27 +10991,6 @@ paths:
             - DepartureCountry
             - CustomerTaxCategory
             - CustomerTaxClassification
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustSlsAreaAddrDepdntTaxInfoType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustSlsAreaAddrDepdntTaxInfoType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_CustSlsAreaAddrDepdntTaxInfo(Customer='{Customer}',SalesOrganization='{SalesOrganization}',DistributionChannel='{DistributionChannel}',Division='{Division}',AddressID='{AddressID}',DepartureCountry='{DepartureCountry}',CustomerTaxCategory='{CustomerTaxCategory}')
   : get:
       summary: Retrieves address dependent customer sales area tax data by using key
@@ -13838,19 +11018,6 @@ paths:
             - DepartureCountry
             - CustomerTaxCategory
             - CustomerTaxClassification
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_CustSlsAreaAddrDepdntTaxInfoType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustSlsAreaAddrDepdntTaxInfoType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustUnldgPtAddrDepdntInfo:
     get:
       summary: Retrieves address dependent customer unloading point data.
@@ -13989,27 +11156,6 @@ paths:
             - SundayMorningClosingTime
             - SundayAfternoonOpeningTime
             - SundayAfternoonClosingTime
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_CustUnldgPtAddrDepdntInfoType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustUnldgPtAddrDepdntInfoType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_CustUnldgPtAddrDepdntInfo(Customer='{Customer}',AddressID='{AddressID}',UnloadingPointName='{UnloadingPointName}'):
     get:
       summary: Retrieves address dependent customer unloading point data by using
@@ -14063,19 +11209,6 @@ paths:
             - SundayMorningClosingTime
             - SundayAfternoonOpeningTime
             - SundayAfternoonClosingTime
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_CustUnldgPtAddrDepdntInfoType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_CustUnldgPtAddrDepdntInfoType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_Supplier:
     get:
       summary: Retrieves supplier general data.
@@ -14245,27 +11378,6 @@ paths:
             - to_SupplierCompany
             - to_SupplierPurchasingOrg
             - to_SupplierText
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_SupplierType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_Supplier('{Supplier}'):
     get:
       summary: Retrieves supplier general data by using supplier number.
@@ -14339,19 +11451,6 @@ paths:
             - to_SupplierCompany
             - to_SupplierPurchasingOrg
             - to_SupplierText
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_SupplierType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_Supplier('{Supplier}')/to_SupplierCompany:
     get:
       summary: Retrieves supplier company data.
@@ -14523,27 +11622,6 @@ paths:
             - to_Supplier
             - to_SupplierDunning
             - to_SupplierWithHoldingTax
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_SupplierCompanyType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierCompanyType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_Supplier('{Supplier}')/to_SupplierPurchasingOrg:
     get:
       summary: Retrieves supplier purchasing organization data.
@@ -14724,27 +11802,6 @@ paths:
             enum:
             - to_PartnerFunction
             - to_PurchasingOrgText
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_SupplierPurchasingOrgType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierPurchasingOrgType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_Supplier('{Supplier}')/to_SupplierText:
     get:
       summary: Retrieves supplier text data.
@@ -14792,27 +11849,6 @@ paths:
             - Language
             - LongTextID
             - LongText
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_SupplierTextType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierTextType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_SupplierCompany:
     get:
       summary: Retrieves supplier company data.
@@ -14983,27 +12019,6 @@ paths:
             - to_Supplier
             - to_SupplierDunning
             - to_SupplierWithHoldingTax
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_SupplierCompanyType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierCompanyType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_SupplierCompany(Supplier='{Supplier}',CompanyCode='{CompanyCode}'):
     get:
       summary: Retrieves supplier company data using key fields.
@@ -15079,19 +12094,6 @@ paths:
             - to_Supplier
             - to_SupplierDunning
             - to_SupplierWithHoldingTax
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_SupplierCompanyType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierCompanyType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_SupplierCompany(Supplier='{Supplier}',CompanyCode='{CompanyCode}')/to_CompanyText:
     get:
       summary: Retrieves supplier company text data attached to company data.
@@ -15142,27 +12144,6 @@ paths:
             - Language
             - LongTextID
             - LongText
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_SupplierCompanyTextType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierCompanyTextType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_SupplierCompany(Supplier='{Supplier}',CompanyCode='{CompanyCode}')/to_Supplier:
     get:
       summary: Retrieves supplier general data.
@@ -15237,19 +12218,6 @@ paths:
             - to_SupplierCompany
             - to_SupplierPurchasingOrg
             - to_SupplierText
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_SupplierType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_SupplierCompany(Supplier='{Supplier}',CompanyCode='{CompanyCode}')/to_SupplierDunning:
     get:
       summary: Retrieves dunning records attached to supplier company data.
@@ -15323,27 +12291,6 @@ paths:
             - DunningClerk
             - AuthorizationGroup
             - SupplierAccountGroup
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_SupplierDunningType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierDunningType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_SupplierCompany(Supplier='{Supplier}',CompanyCode='{CompanyCode}')/to_SupplierWithHoldingTax:
     get:
       summary: Retrieves supplier withholding tax records.
@@ -15420,27 +12367,6 @@ paths:
             - WithholdingTaxExmptPercent
             - WithholdingTaxNumber
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_SupplierWithHoldingTaxType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierWithHoldingTaxType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_SupplierCompanyText:
     get:
       summary: Retrieves supplier company text data attached to company data.
@@ -15490,27 +12416,6 @@ paths:
             - Language
             - LongTextID
             - LongText
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_SupplierCompanyTextType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierCompanyTextType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_SupplierCompanyText(Supplier='{Supplier}',CompanyCode='{CompanyCode}',Language='{Language}',LongTextID='{LongTextID}'):
     get:
       summary: Retrieves supplier company text data by using the key fields.
@@ -15534,19 +12439,6 @@ paths:
             - Language
             - LongTextID
             - LongText
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_SupplierCompanyTextType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierCompanyTextType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_SupplierDunning:
     get:
       summary: Retrieves dunning records attached to supplier company data.
@@ -15619,27 +12511,6 @@ paths:
             - DunningClerk
             - AuthorizationGroup
             - SupplierAccountGroup
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_SupplierDunningType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierDunningType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_SupplierDunning(Supplier='{Supplier}',CompanyCode='{CompanyCode}',DunningArea='{DunningArea}'):
     get:
       summary: Retrieves supplier dunning records by using key fields.
@@ -15670,19 +12541,6 @@ paths:
             - DunningClerk
             - AuthorizationGroup
             - SupplierAccountGroup
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_SupplierDunningType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierDunningType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_SupplierPartnerFunc:
     get:
       summary: Retrieves supplier purchasing organization partner function records.
@@ -15752,27 +12610,6 @@ paths:
             - CreatedByUser
             - ReferenceSupplier
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_SupplierPartnerFuncType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierPartnerFuncType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_SupplierPartnerFunc(Supplier='{Supplier}',PurchasingOrganization='{PurchasingOrganization}',SupplierSubrange='{SupplierSubrange}',Plant='{Plant}',PartnerFunction='{PartnerFunction}',PartnerCounter='{PartnerCounter}')
   : get:
       summary: Retrieves supplier purchasing organization partner function data by
@@ -15803,19 +12640,6 @@ paths:
             - CreatedByUser
             - ReferenceSupplier
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_SupplierPartnerFuncType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierPartnerFuncType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_SupplierPurchasingOrg:
     get:
       summary: Retrieves supplier purchasing organization data.
@@ -15995,27 +12819,6 @@ paths:
             enum:
             - to_PartnerFunction
             - to_PurchasingOrgText
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_SupplierPurchasingOrgType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierPurchasingOrgType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_SupplierPurchasingOrg(Supplier='{Supplier}',PurchasingOrganization='{PurchasingOrganization}'):
     get:
       summary: Retrieves supplier purchasing organization data by using the key fields.
@@ -16091,19 +12894,6 @@ paths:
             enum:
             - to_PartnerFunction
             - to_PurchasingOrgText
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_SupplierPurchasingOrgType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierPurchasingOrgType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_SupplierPurchasingOrg(Supplier='{Supplier}',PurchasingOrganization='{PurchasingOrganization}')/to_PartnerFunction:
     get:
       summary: Retrieves supplier purchasing organization partner function records.
@@ -16174,27 +12964,6 @@ paths:
             - CreatedByUser
             - ReferenceSupplier
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_SupplierPartnerFuncType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierPartnerFuncType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_SupplierPurchasingOrg(Supplier='{Supplier}',PurchasingOrganization='{PurchasingOrganization}')/to_PurchasingOrgText:
     get:
       summary: Retrieves supplier purchasing organization text data.
@@ -16245,27 +13014,6 @@ paths:
             - Language
             - LongTextID
             - LongText
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_SupplierPurchasingOrgTextType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierPurchasingOrgTextType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_SupplierPurchasingOrgText:
     get:
       summary: Retrieves supplier purchasing organization text data.
@@ -16315,27 +13063,6 @@ paths:
             - Language
             - LongTextID
             - LongText
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_SupplierPurchasingOrgTextType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierPurchasingOrgTextType'
-        4XX:
-          $ref: '#/components/responses/error'
   ? /A_SupplierPurchasingOrgText(Supplier='{Supplier}',PurchasingOrganization='{PurchasingOrganization}',Language='{Language}',LongTextID='{LongTextID}')
   : get:
       summary: Retrieves supplier purchasing organization text data by using the key
@@ -16360,19 +13087,6 @@ paths:
             - Language
             - LongTextID
             - LongText
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_SupplierPurchasingOrgTextType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierPurchasingOrgTextType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_SupplierText:
     get:
       summary: Retrieves supplier text data.
@@ -16419,27 +13133,6 @@ paths:
             - Language
             - LongTextID
             - LongText
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_SupplierTextType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierTextType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_SupplierText(Supplier='{Supplier}',Language='{Language}',LongTextID='{LongTextID}'):
     get:
       summary: Retrieves supplier text data by key fields.
@@ -16462,19 +13155,6 @@ paths:
             - Language
             - LongTextID
             - LongText
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_SupplierTextType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierTextType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_SupplierWithHoldingTax:
     get:
       summary: Retrieves supplier withholding tax records.
@@ -16550,27 +13230,6 @@ paths:
             - WithholdingTaxExmptPercent
             - WithholdingTaxNumber
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Wrapper
-                type: object
-                properties:
-                  d:
-                    title: Collection of A_SupplierWithHoldingTaxType
-                    type: object
-                    properties:
-                      __count:
-                        $ref: '#/components/schemas/count'
-                      results:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierWithHoldingTaxType'
-        4XX:
-          $ref: '#/components/responses/error'
   /A_SupplierWithHoldingTax(Supplier='{Supplier}',CompanyCode='{CompanyCode}',WithholdingTaxType='{WithholdingTaxType}'):
     get:
       summary: Retrieves supplier withholding tax records by key fields.
@@ -16602,19 +13261,6 @@ paths:
             - WithholdingTaxExmptPercent
             - WithholdingTaxNumber
             - AuthorizationGroup
-      responses:
-        '200':
-          description: Retrieved entity
-          content:
-            application/json:
-              schema:
-                title: A_SupplierWithHoldingTaxType
-                type: object
-                properties:
-                  d:
-                    $ref: '#/components/schemas/API_BUSINESS_PARTNER.A_SupplierWithHoldingTaxType'
-        4XX:
-          $ref: '#/components/responses/error'
 components:
   schemas:
     API_BUSINESS_PARTNER.A_AddressEmailAddressType:
