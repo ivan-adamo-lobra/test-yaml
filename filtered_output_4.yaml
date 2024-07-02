@@ -1,0 +1,264 @@
+        WithholdingTaxCode:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: W/Tax Code
+          description: Withholding Tax Code
+        WithholdingTaxExmptPercent:
+          type: string
+          nullable: true
+          format: decimal
+          x-sap-precision: 5
+          x-sap-scale: 2
+          multipleOf: 0.01
+          minimum: -999.99
+          maximum: 999.99
+          example: '0'
+          title: Exemption Rate
+        WithholdingTaxNumber:
+          type: string
+          nullable: true
+          maxLength: 16
+          title: W/tax number
+          description: Withholding tax identification number
+        AuthorizationGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Authorization
+          description: Authorization Group
+      title: Company Withholding Tax
+    API_BUSINESS_PARTNER.A_SupplierWithHoldingTaxType-create:
+      type: object
+      properties:
+        Supplier:
+          type: string
+          maxLength: 10
+          title: Supplier
+          description: Account Number of Supplier
+        CompanyCode:
+          type: string
+          maxLength: 4
+          title: Company Code
+        WithholdingTaxType:
+          type: string
+          maxLength: 2
+          title: Withholding Tax Type
+          description: Indicator for Withholding Tax Type
+        ExemptionDateBegin:
+          type: string
+          nullable: true
+          example: /Date(1492041600000)/
+          title: Exemption Start Date
+          description: Date on Which Exemption Begins
+        ExemptionDateEnd:
+          type: string
+          nullable: true
+          example: /Date(1492041600000)/
+          title: Exemption End Date
+          description: Date on Which Exemption Ends
+        ExemptionReason:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: Exemption Reason
+          description: Reason for Exemption
+        IsWithholdingTaxSubject:
+          type: boolean
+          nullable: true
+          title: Subject to W/Tx
+          description: 'Indicator: Subject to Withholding Tax?'
+        RecipientType:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: Recipient Type
+          description: Type of Recipient
+        WithholdingTaxCertificate:
+          type: string
+          nullable: true
+          maxLength: 25
+          title: Exemption Number
+          description: Exemption Certificate Number
+        WithholdingTaxCode:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: W/Tax Code
+          description: Withholding Tax Code
+        WithholdingTaxExmptPercent:
+          type: string
+          nullable: true
+          format: decimal
+          x-sap-precision: 5
+          x-sap-scale: 2
+          multipleOf: 0.01
+          minimum: -999.99
+          maximum: 999.99
+          example: '0'
+          title: Exemption Rate
+        WithholdingTaxNumber:
+          type: string
+          nullable: true
+          maxLength: 16
+          title: W/tax number
+          description: Withholding tax identification number
+        AuthorizationGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Authorization
+          description: Authorization Group
+      required:
+      - Supplier
+      - CompanyCode
+      - WithholdingTaxType
+      title: Company Withholding Tax (for create)
+    API_BUSINESS_PARTNER.A_SupplierWithHoldingTaxType-update:
+      type: object
+      properties:
+        ExemptionDateBegin:
+          type: string
+          nullable: true
+          example: /Date(1492041600000)/
+          title: Exemption Start Date
+          description: Date on Which Exemption Begins
+        ExemptionDateEnd:
+          type: string
+          nullable: true
+          example: /Date(1492041600000)/
+          title: Exemption End Date
+          description: Date on Which Exemption Ends
+        ExemptionReason:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: Exemption Reason
+          description: Reason for Exemption
+        IsWithholdingTaxSubject:
+          type: boolean
+          nullable: true
+          title: Subject to W/Tx
+          description: 'Indicator: Subject to Withholding Tax?'
+        RecipientType:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: Recipient Type
+          description: Type of Recipient
+        WithholdingTaxCertificate:
+          type: string
+          nullable: true
+          maxLength: 25
+          title: Exemption Number
+          description: Exemption Certificate Number
+        WithholdingTaxCode:
+          type: string
+          nullable: true
+          maxLength: 2
+          title: W/Tax Code
+          description: Withholding Tax Code
+        WithholdingTaxExmptPercent:
+          type: string
+          nullable: true
+          format: decimal
+          x-sap-precision: 5
+          x-sap-scale: 2
+          multipleOf: 0.01
+          minimum: -999.99
+          maximum: 999.99
+          example: '0'
+          title: Exemption Rate
+        WithholdingTaxNumber:
+          type: string
+          nullable: true
+          maxLength: 16
+          title: W/tax number
+          description: Withholding tax identification number
+        AuthorizationGroup:
+          type: string
+          nullable: true
+          maxLength: 4
+          title: Authorization
+          description: Authorization Group
+      title: Company Withholding Tax (for update)
+    count:
+      type: string
+      description: The number of entities in the collection. Available when using
+        the [$inlinecount](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=67)
+        query option.
+    error:
+      type: object
+      required:
+      - error
+      properties:
+        error:
+          type: object
+          required:
+          - code
+          - message
+          properties:
+            code:
+              type: string
+            message:
+              type: object
+              required:
+              - lang
+              - value
+              properties:
+                lang:
+                  type: string
+                value:
+                  type: string
+            innererror:
+              type: object
+              description: The structure of this object is service-specific
+  parameters:
+    top:
+      name: $top
+      in: query
+      description: Show only the first n items, see [Paging - Top](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=66)
+      schema:
+        type: integer
+        minimum: 0
+      example: 50
+    skip:
+      name: $skip
+      in: query
+      description: Skip the first n items, see [Paging - Skip](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=65)
+      schema:
+        type: integer
+        minimum: 0
+    count:
+      name: $inlinecount
+      in: query
+      description: Include count of items, see [Inlinecount](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=67)
+      schema:
+        type: string
+        enum:
+        - allpages
+        - none
+  responses:
+    error:
+      description: Error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+  securitySchemes:
+    OAuth2Auth:
+      type: oauth2
+      flows:
+        authorizationCode:
+          scopes:
+            API_BUSINESS_PARTNER_0001: ''
+          refreshUrl: https://{host}:{port}
+          authorizationUrl: https://{host}:{port}
+          tokenUrl: https://{host}:{port}
+    BasicAuth:
+      type: http
+      scheme: basic
+security:
+- OAuth2Auth:
+  - API_BUSINESS_PARTNER_0001
+- BasicAuth: []

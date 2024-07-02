@@ -22,15 +22,35 @@ def filter_get_methods_and_remove_responses(yaml_content):
                 del filtered_content['paths'][path]
     return filtered_content
 
-def write_yaml_file(data, filename):
-    """ Scrive i dati filtrati in un nuovo file YAML. """
-    with open(filename, 'w') as file:
-        yaml.dump(data, file, sort_keys=False, default_flow_style=False)
+def write_yaml_files(data, base_filename, max_lines=10000):
+    """ Scrive i dati filtrati in più file YAML, ciascuno con un massimo di max_lines righe. """
+    serialized_data = yaml.dump(data, sort_keys=False, default_flow_style=False)
+    lines = serialized_data.splitlines()
+    
+    file_index = 1
+    line_count = 0
+    current_file_lines = []
+    
+    for line in lines:
+        if line_count >= max_lines:
+            with open(f"{base_filename}_{file_index}.yaml", 'w') as file:
+                file.write("\n".join(current_file_lines))
+            file_index += 1
+            line_count = 0
+            current_file_lines = []
+        
+        current_file_lines.append(line)
+        line_count += 1
+    
+    # Scrive l'ultimo file se ci sono linee rimanenti
+    if current_file_lines:
+        with open(f"{base_filename}_{file_index}.yaml", 'w') as file:
+            file.write("\n".join(current_file_lines))
 
 def main():
     yaml_content = load_yaml_file("API_BUSINESS_PARTNER.yaml")
     filtered_content = filter_get_methods_and_remove_responses(yaml_content)
-    write_yaml_file(filtered_content, "filtered_output.yaml")
+    write_yaml_files(filtered_content, "filtered_output")
 
 if __name__ == "__main__":
     main()
