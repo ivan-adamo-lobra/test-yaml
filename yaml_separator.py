@@ -33,7 +33,7 @@ def write_yaml_files(data, base_filename, max_lines=7000):
     
     for line in lines:
         if line_count >= max_lines:
-            with open(f"{base_filename}_{file_index}.yaml", 'w') as file:
+            with open(f"{base_filename}_{file_index}.txt", 'w') as file:
                 file.write("\n".join(current_file_lines))
             file_index += 1
             line_count = 0
